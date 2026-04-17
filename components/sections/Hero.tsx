@@ -53,23 +53,18 @@ export default function Hero() {
           más de 5hs semanales a planificar.
         </div>
 
-        <div className="relative max-w-5xl mx-auto rounded-xl overflow-hidden shadow-[0_20px_40px_rgba(156,68,0,0.06)] border border-stone-200/50 bg-gradient-to-br from-orange-50 to-orange-100/50">
-          <div className="bg-stone-50 py-3 px-4 flex items-center gap-2 border-b border-stone-200">
-            <div className="w-3 h-3 rounded-full bg-red-400" />
-            <div className="w-3 h-3 rounded-full bg-orange-400" />
-            <div className="w-3 h-3 rounded-full bg-green-400" />
-          </div>
-          <div className="p-8">
-            <Image
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyM4oRFbHh3mAhRnTgpM1nMjEvFiYdV5Uk18Fn7wHj07QBsLqhMjktFD7Ski5FjCMEhGKT1SFAuj9xwie43sfE1GyzuVx_M58LDnjoq8OHEKagLx5BBUCKn0l-3rEAeHvD37uOQNkFje5PEVCxPCOQArSVeKzPqpwZmyINNwAC8ljJVjMwN3cfrMcbpQ_XCaadLVdO-VLLPh2yBu1ibCQjypX6MjtQvVtcTFGVg0MvzI1JO9mes3D7wWiAGnSFhoStAZPh15x-wg4"
-              alt="Dashboard de Facilitador Docente"
-              width={1200}
-              height={675}
-              className="w-full h-auto object-cover rounded-lg shadow-sm border border-stone-200/50"
-              priority
-              unoptimized
-            />
-          </div>
+        <div
+          className="relative max-w-5xl mx-auto rounded-2xl overflow-hidden"
+          style={{ boxShadow: "0 20px 40px rgba(156,68,0,0.08)" }}
+        >
+          <Image
+            src="/images/mockups/principal.png"
+            alt="Dashboard de Facilitador Docente — Tu espacio de planificación docente"
+            width={1400}
+            height={875}
+            className="w-full h-auto block"
+            priority
+          />
         </div>
       </div>
     </section>
