@@ -7,7 +7,7 @@ const faqs = [
   {
     question: "¿Qué niveles educativos abarca?",
     answer:
-      "Actualmente cubrimos desde Educación Inicial hasta 9° grado (Tramos 1 al 6), abarcando todos los espacios y unidades curriculares oficiales.",
+      "Actualmente cubrimos desde Educación Inicial hasta 6° grado, abarcando todos los espacios y unidades curriculares del marco EBI vigente. Estamos trabajando en la incorporación de nuevos marcos curriculares para ampliar la cobertura próximamente.",
   },
   {
     question: "¿La IA reemplaza mi rol docente?",
