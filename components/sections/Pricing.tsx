@@ -178,7 +178,16 @@ export default function Pricing() {
                 })}
               </ul>
 
-              <a href="#" className={plan.ctaClass}>
+              <a
+                href={
+                  plan.name === "Early Access"
+                    ? "https://forms.gle/tjnfZ6jgwGpFiBfz6"
+                    : "https://mutual-cod-38.accounts.dev/waitlist"
+                }
+                target="_blank"
+                rel="noopener noreferrer"
+                className={plan.ctaClass}
+              >
                 {plan.cta}
               </a>
             </div>

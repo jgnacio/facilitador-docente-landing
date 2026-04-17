@@ -12,7 +12,9 @@ export default function CTA() {
         </p>
         <div className="flex flex-col items-center gap-4">
           <a
-            href="#"
+            href="https://forms.gle/tjnfZ6jgwGpFiBfz6"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-primary text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-primary-hover transition-colors shadow-[0_10px_25px_rgba(244,125,49,0.3)] w-full sm:w-auto"
           >
             Acceder a Facilitador Docente

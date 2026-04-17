@@ -131,7 +131,9 @@ export default function Navbar() {
           {/* Right: CTA + hamburger */}
           <div className="flex items-center gap-2 sm:gap-3">
             <motion.a
-              href="#"
+              href="https://forms.gle/tjnfZ6jgwGpFiBfz6"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-primary text-white px-4 sm:px-5 py-2 sm:py-2.5 rounded-lg font-medium text-sm shadow-sm relative overflow-hidden"
               whileHover={{ scale: 1.04, boxShadow: "0 8px 20px rgba(244,125,49,0.35)" }}
               whileTap={{ scale: 0.97 }}
@@ -221,7 +223,9 @@ export default function Navbar() {
                 <div className="h-px bg-stone-200 mx-1 my-1" />
 
                 <motion.a
-                  href="#"
+                  href="https://forms.gle/tjnfZ6jgwGpFiBfz6"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   onClick={() => setMobileOpen(false)}
                   className="mx-1 mb-1 flex items-center justify-center gap-2 text-white py-3.5 rounded-xl font-medium relative overflow-hidden"
                   style={{

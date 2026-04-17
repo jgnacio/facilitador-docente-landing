@@ -75,7 +75,9 @@ export default function ForWhom() {
               ))}
             </ul>
             <a
-              href="#"
+              href="https://forms.gle/tjnfZ6jgwGpFiBfz6"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-stone-700 font-bold hover:text-stone-900 transition-colors"
             >
               Contactar ventas{" "}
