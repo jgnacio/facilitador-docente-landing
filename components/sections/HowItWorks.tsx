@@ -3,23 +3,23 @@ import Image from "next/image";
 const steps = [
   {
     number: "1",
-    title: "Decís qué querés planificar",
-    quote: '"Quiero planificar algo de lectura para 5to grado"',
+    title: "Primero, mapea el currículo",
+    quote: '"Sabés que el plan tiene fundamento — cada actividad está anclada al programa oficial."',
     description:
-      "El agente hace todo el trabajo pesado solo: busca las Competencias Específicas, los contenidos del programa oficial, los criterios de logro, y revisa tu grupo de alumnos. Todo simultáneo, invisible para el docente.",
+      "Identifica las Competencias Específicas y Criterios de Logro que corresponden a tu grado y espacio. No es un chat genérico. Conoce la diferencia entre Tramo 3 y Tramo 4.",
   },
   {
     number: "2",
-    title: "Confirmás el enfoque curricular",
+    title: "Después, conoce tu grupo",
     quote: '"¿Con qué temática querés trabajar la actividad?"',
     description:
-      "El agente te muestra qué CE eligió, qué contenido, qué metodología activa. Solo te hace una pregunta. Puede ser algo de la realidad del grupo, una fecha especial, un proyecto en curso.",
+      "Considera los alumnos reales que cargaste, no un \"grupo genérico\". El agente te sugiere un contenido y te dice de dónde viene en el currículo ANEP.",
   },
   {
     number: "3",
-    title: "Revisás y guardás",
+    title: "Recién ahí, genera la planificación",
     description:
-      "Aparece la planificación completa — Inicio, Desarrollo y Cierre — contextualizada con tu temática y adaptada a tu grupo real.",
+      "Aparece la planificación completa — Inicio, Desarrollo y Cierre — con referencias exactas a qué parte del programa oficial respalda cada actividad.",
     actions: ["Sí, guardar", "No por ahora"],
   },
 ];
@@ -30,11 +30,10 @@ export default function HowItWorks() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="font-headline text-3xl md:text-5xl text-stone-900 mb-6">
-            3 mensajes. El resto lo hace el agente.
+            Planificación que respeta el programa ANEP.
           </h2>
           <p className="text-lg max-w-2xl mx-auto text-stone-600">
-            No configurás nada. No elegís competencias. No buscás en el programa.
-            Solo contás qué querés enseñar.
+            El proceso importa. No es magia, es una herramienta pensada para maestras que asegura que cada clase tenga intención curricular.
           </p>
         </div>
 
@@ -83,8 +82,8 @@ export default function HowItWorks() {
               style={{ background: "rgba(244,125,49,0.05)", marginLeft: "72px" }}
             >
               <span className="font-semibold text-stone-800">En total: 3 mensajes del docente.</span>{" "}
-              El agente hace el 95% del trabajo — currículo, metodología, diferenciaciones por alumno.
-              El docente solo aporta su conocimiento del contexto real del aula.
+              El asistente hace el trabajo pesado — currículo, metodología, diferenciaciones por alumno.
+              Tú aportás tu conocimiento del contexto real del aula.
             </div>
           </div>
 

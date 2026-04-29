@@ -1,28 +1,28 @@
 const faqs = [
   {
-    question: "¿Las planificaciones están actualizadas al EBI vigente?",
+    question: "¿El agente conoce el programa oficial de ANEP?",
     answer:
-      "Sí. Nuestra base de datos contiene los documentos oficiales de ANEP correspondientes al Marco Curricular Nacional y los Programas de Educación Básica Integrada actualizados.",
+      "Sí. El asistente tiene integrado el currículo oficial de ANEP vigente. Mapea directamente las Competencias Específicas y Criterios de Logro que corresponden a tu grado y espacio antes de sugerir actividades.",
   },
   {
-    question: "¿Qué niveles educativos abarca?",
+    question: "¿Puedo planificar para mis alumnos específicos?",
     answer:
-      "Actualmente cubrimos desde Educación Inicial hasta 6° grado, abarcando todos los espacios y unidades curriculares del marco EBI vigente. Estamos trabajando en la incorporación de nuevos marcos curriculares para ampliar la cobertura próximamente.",
+      "Absolutamente. Considera la realidad del grupo que cargaste, no un 'grupo genérico'. Si tenés alumnos con necesidades específicas de apoyo, el agente genera diferenciaciones pedagógicas reales para ellos.",
   },
   {
-    question: "¿La IA reemplaza mi rol docente?",
+    question: "¿Cómo sé que la planificación está alineada al currículo?",
     answer:
-      "De ninguna manera. Facilitador Docente es un asistente que automatiza la estructura, redacción y conexión con el programa oficial. Tú aportás la intención pedagógica, el conocimiento de tus alumnos y la evaluación final del material generado.",
+      "El agente te indica exactamente de qué parte del programa oficial proviene cada contenido sugerido. Las actividades propuestas se anclan directamente a las metas de aprendizaje y criterios de logro.",
   },
   {
-    question: "¿Puedo cancelar en cualquier momento?",
+    question: "¿Funciona para 3° a 6° grado EBI?",
     answer:
-      "Sí, no hay contratos de permanencia. Podés cancelar tu suscripción mensual cuando lo desees desde el panel de configuración de tu cuenta.",
+      "Sí, está diseñado específicamente para maestras del Tramo 3 y Tramo 4 de Educación Básica Integrada (3° a 6° grado de primaria), respetando las características de estas edades.",
   },
   {
-    question: "¿Cómo funciona el pago con Mercado Pago?",
+    question: "¿Qué son las Competencias Específicas y cómo las usa el agente?",
     answer:
-      "Utilizamos la pasarela de pagos segura de Mercado Pago Uruguay. Podés pagar con cualquier tarjeta de crédito o débito local, o con saldo en tu cuenta de Mercado Pago. La renovación es automática mes a mes.",
+      "Son los aprendizajes que el currículo espera desarrollar en cada espacio. El agente no te pide que las busques o las ingreses de memoria; las identifica automáticamente a partir de tu intención pedagógica y las integra en el diseño de la clase.",
   },
 ];
 

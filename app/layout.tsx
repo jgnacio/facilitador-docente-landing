@@ -18,9 +18,31 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Facilitador Docente — Planificaciones EBI en minutos",
+  title: "Planificá con el currículo de verdad | Facilitador Docente EBI",
   description:
-    "Tu asistente personal para crear planificaciones adaptadas al EBI de ANEP en minutos. Recuperá tu tiempo libre sin perder calidad educativa.",
+    "Facilitador Docente para EBI Uruguay. Planificá con el currículo oficial de ANEP: Competencias Específicas, Criterios de Logro y referencias por grado. Agente IA que conoce tu grupo.",
+  openGraph: {
+    title: "Planificá con el currículo de verdad | Facilitador Docente",
+    description: "La IA que conoce el programa oficial de ANEP. Planificá con Competencias Específicas y Criterios de Logro para EBI.",
+    url: "https://facilitadordocente.uy",
+    siteName: "Facilitador Docente",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Facilitador Docente Preview",
+      },
+    ],
+    locale: "es_UY",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Planificá con el currículo de verdad | Facilitador Docente",
+    description: "La IA que conoce el programa oficial de ANEP y tu grupo de alumnos.",
+    images: ["/og-image.png"],
+  },
 };
 
 export default function RootLayout({

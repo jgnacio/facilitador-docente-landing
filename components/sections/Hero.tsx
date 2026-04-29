@@ -17,8 +17,7 @@ export default function Hero() {
           <span className="text-primary italic">Más horas de disfrute educativo.</span>
         </h1>
         <p className="text-lg md:text-xl text-stone-600 max-w-2xl mx-auto mb-10 leading-relaxed font-body">
-          Tu asistente personal para crear planificaciones adaptadas al EBI de ANEP en minutos.
-          Recuperá tu tiempo libre sin perder calidad educativa.
+          El Facilitador Docente lee el currículo oficial de ANEP, conoce a tus alumnos, y planifica junto a vos.
         </p>
 
         <div className="max-w-xl mx-auto mb-10">
