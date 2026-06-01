@@ -131,7 +131,7 @@ export default function Navbar() {
           {/* Right: CTA + hamburger */}
           <div className="flex items-center gap-2 sm:gap-3">
             <motion.a
-              href="https://forms.gle/tjnfZ6jgwGpFiBfz6"
+              href="https://app.facilitadordocente.com"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-primary text-white px-4 sm:px-5 py-2 sm:py-2.5 rounded-lg font-medium text-sm shadow-sm relative overflow-hidden"
@@ -223,7 +223,7 @@ export default function Navbar() {
                 <div className="h-px bg-stone-200 mx-1 my-1" />
 
                 <motion.a
-                  href="https://forms.gle/tjnfZ6jgwGpFiBfz6"
+                  href="https://app.facilitadordocente.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setMobileOpen(false)}

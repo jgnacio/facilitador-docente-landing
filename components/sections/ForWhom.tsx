@@ -75,7 +75,7 @@ export default function ForWhom() {
               ))}
             </ul>
             <a
-              href="https://forms.gle/tjnfZ6jgwGpFiBfz6"
+              href="https://app.facilitadordocente.com"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-stone-700 font-bold hover:text-stone-900 transition-colors"

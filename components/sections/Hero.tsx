@@ -34,7 +34,7 @@ export default function Hero() {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
           <a
-            href="https://forms.gle/tjnfZ6jgwGpFiBfz6"
+            href="https://app.facilitadordocente.com"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-primary text-white px-8 py-3.5 rounded-lg font-medium hover:bg-primary-hover transition-colors w-full sm:w-auto shadow-[0_10px_20px_rgba(244,125,49,0.2)]"

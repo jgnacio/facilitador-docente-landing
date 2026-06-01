@@ -181,8 +181,8 @@ export default function Pricing() {
               <a
                 href={
                   plan.name === "Early Access"
-                    ? "https://forms.gle/tjnfZ6jgwGpFiBfz6"
-                    : "https://mutual-cod-38.accounts.dev/waitlist"
+                    ? "https://app.facilitadordocente.com"
+                    : "https://app.facilitadordocente.com"
                 }
                 target="_blank"
                 rel="noopener noreferrer"
