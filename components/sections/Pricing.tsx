@@ -45,54 +45,18 @@ function HoneyJar({ fill }: { fill: "empty" | "low" | "mid" | "full" }) {
 
 const plans = [
   {
-    name: "Gratis",
-    price: "$0",
-    period: "/mes",
-    fill: "empty" as const,
-    highlighted: false,
-    badge: null,
-    subtext: null,
-    features: [
-      { text: "3 planificaciones al mes", included: true },
-      { text: "Acceso al Explorador EBI", included: true },
-      { text: "Sin adaptaciones especiales", included: false },
-      { text: "Sin exportación PDF", included: false },
-    ],
-    cta: "Comenzar gratis",
-    ctaClass:
-      "block w-full py-2.5 px-4 text-center border border-stone-300 rounded-lg text-stone-700 font-medium hover:bg-stone-50 transition-colors",
-  },
-  {
-    name: "Early Access",
-    price: "$5",
-    period: "/mes",
-    fill: "low" as const,
-    highlighted: true,
-    badge: "Oferta de lanzamiento",
-    subtext: "Válido por el lanzamiento",
-    features: [
-      { text: "Planificaciones ilimitadas", included: true },
-      { text: "Asistente IA Potente", included: true },
-      { text: "Exportación PDF", included: true },
-      { text: "", included: null },
-    ],
-    cta: "Aprovechar oferta",
-    ctaClass:
-      "block w-full py-2.5 px-4 text-center bg-primary text-white rounded-lg font-medium hover:bg-primary-hover transition-colors shadow-md",
-  },
-  {
     name: "Plus",
-    price: "$10",
+    price: "$400",
     period: "/mes",
     fill: "mid" as const,
     highlighted: false,
     badge: null,
-    subtext: null,
+    subtext: "Pesos uruguayos · vía Mercado Pago",
     features: [
-      { text: "Todo lo de Early Access", included: true },
+      { text: "Planificaciones ilimitadas", included: true },
+      { text: "Asistente IA", included: true },
+      { text: "Exportación PDF", included: true },
       { text: "Adaptaciones curriculares", included: true },
-      { text: "Rúbricas automáticas", included: true },
-      { text: "Soporte Multigrado", included: true },
     ],
     cta: "Suscribirse",
     ctaClass:
@@ -100,12 +64,12 @@ const plans = [
   },
   {
     name: "Max",
-    price: "$20",
+    price: "$800",
     period: "/mes",
     fill: "full" as const,
-    highlighted: false,
-    badge: null,
-    subtext: null,
+    highlighted: true,
+    badge: "Más completo",
+    subtext: "Pesos uruguayos · vía Mercado Pago",
     features: [
       { text: "Todo lo de Plus", included: true },
       { text: "Modelos de IA Avanzados", included: true },
@@ -114,7 +78,7 @@ const plans = [
     ],
     cta: "Suscribirse",
     ctaClass:
-      "block w-full py-2.5 px-4 text-center border border-stone-300 rounded-lg text-stone-700 font-medium hover:bg-stone-50 transition-colors",
+      "block w-full py-2.5 px-4 text-center bg-primary text-white rounded-lg font-medium hover:bg-primary-hover transition-colors shadow-md",
   },
 ];
 
@@ -131,7 +95,7 @@ export default function Pricing() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto">
           {plans.map((plan) => (
             <div
               key={plan.name}
@@ -179,11 +143,7 @@ export default function Pricing() {
               </ul>
 
               <a
-                href={
-                  plan.name === "Early Access"
-                    ? "https://app.facilitadordocente.com"
-                    : "https://app.facilitadordocente.com"
-                }
+                href="https://app.facilitadordocente.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={plan.ctaClass}

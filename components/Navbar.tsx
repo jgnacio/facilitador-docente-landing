@@ -145,7 +145,7 @@ export default function Navbar() {
                 whileHover={{ x: "200%" }}
                 transition={{ duration: 0.5 }}
               />
-              <span className="relative whitespace-nowrap">Empezar gratis</span>
+              <span className="relative whitespace-nowrap">Ingresar</span>
             </motion.a>
 
             {/* Hamburger colmena — solo mobile */}
@@ -238,7 +238,7 @@ export default function Navbar() {
                   whileTap={{ scale: 0.98 }}
                 >
                   <span className="material-symbols-outlined text-[18px]">hive</span>
-                  <span>Empezar gratis</span>
+                  <span>Ingresar</span>
                 </motion.a>
               </div>
             </motion.div>
