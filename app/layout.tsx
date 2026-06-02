@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Fraunces, DM_Sans } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -61,6 +62,7 @@ export default function RootLayout({
       <body className="bg-light-bg text-stone-900 font-body antialiased">
         {children}
       </body>
+      <GoogleAnalytics gaId="G-04PKCN4MXE" />
     </html>
   );
 }
