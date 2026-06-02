@@ -1,3 +1,7 @@
+"use client";
+
+import { sendGAEvent } from "@next/third-parties/google";
+
 function HoneyJar({ fill }: { fill: "empty" | "low" | "mid" | "full" }) {
   const fills = {
     empty: (
@@ -146,6 +150,7 @@ export default function Pricing() {
                 href="https://app.facilitadordocente.com"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => sendGAEvent({ event: `click_plan_${plan.name.toLowerCase()}` })}
                 className={plan.ctaClass}
               >
                 {plan.cta}

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import { sendGAEvent } from "@next/third-parties/google";
 import Image from "next/image";
 
 const NAV_LINKS = [
@@ -134,6 +135,7 @@ export default function Navbar() {
               href="https://app.facilitadordocente.com"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => sendGAEvent({ event: "click_ingresar_navbar_desktop" })}
               className="bg-primary text-white px-4 sm:px-5 py-2 sm:py-2.5 rounded-lg font-medium text-sm shadow-sm relative overflow-hidden"
               whileHover={{ scale: 1.04, boxShadow: "0 8px 20px rgba(244,125,49,0.35)" }}
               whileTap={{ scale: 0.97 }}
@@ -226,7 +228,7 @@ export default function Navbar() {
                   href="https://app.facilitadordocente.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={() => setMobileOpen(false)}
+                  onClick={() => { setMobileOpen(false); sendGAEvent({ event: "click_ingresar_navbar_mobile" }); }}
                   className="mx-1 mb-1 flex items-center justify-center gap-2 text-white py-3.5 rounded-xl font-medium relative overflow-hidden"
                   style={{
                     backgroundColor: "#F47D31",
