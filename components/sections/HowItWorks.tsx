@@ -98,7 +98,7 @@ export default function HowItWorks() {
             >
               <Image
                 src="/images/mockups/agenteIA.png"
-                alt="Interfaz del agente IA de Facilitador Docente"
+                alt="Agente IA de Facilitador Docente planificando con competencias específicas del currículo ANEP"
                 width={1400}
                 height={875}
                 className="w-full h-auto block"

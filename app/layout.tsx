@@ -19,20 +19,47 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://facilitadordocente.com"),
   title: "Planificá con el currículo de verdad | Facilitador Docente EBI",
   description:
     "Facilitador Docente para EBI Uruguay. Planificá con el currículo oficial de ANEP: Competencias Específicas, Criterios de Logro y referencias por grado. Agente IA que conoce tu grupo.",
+  keywords: [
+    "planificación docente Uruguay",
+    "EBI Uruguay",
+    "ANEP currículo",
+    "competencias específicas EBI",
+    "criterios de logro primaria",
+    "agente IA educación",
+    "maestras Uruguay planificación",
+    "Educación Básica Integrada",
+    "planificación automática ANEP",
+    "herramienta docente Uruguay",
+  ],
+  authors: [{ name: "Facilitador Docente", url: "https://facilitadordocente.com" }],
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  alternates: {
+    canonical: "https://facilitadordocente.com",
+  },
   openGraph: {
     title: "Planificá con el currículo de verdad | Facilitador Docente",
     description: "La IA que conoce el programa oficial de ANEP. Planificá con Competencias Específicas y Criterios de Logro para EBI.",
-    url: "https://facilitadordocente.uy",
+    url: "https://facilitadordocente.com",
     siteName: "Facilitador Docente",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Facilitador Docente Preview",
+        alt: "Facilitador Docente — Planificación docente con el currículo oficial de ANEP para EBI Uruguay",
       },
     ],
     locale: "es_UY",

@@ -12,13 +12,18 @@ export default function Footer() {
           className="h-16 w-auto"
         />
         <div className="flex flex-wrap justify-center gap-6">
-          {["Privacidad", "Términos", "Contacto", "Ayuda"].map((link) => (
+          {[
+            { label: "Privacidad", href: "#" },
+            { label: "Términos", href: "#" },
+            { label: "Contacto", href: "#" },
+            { label: "Ayuda", href: "mailto:facilitadordocenteuy@gmail.com" },
+          ].map((link) => (
             <a
-              key={link}
-              href="#"
+              key={link.label}
+              href={link.href}
               className="text-stone-500 hover:text-primary transition-colors text-sm"
             >
-              {link}
+              {link.label}
             </a>
           ))}
         </div>
