@@ -75,9 +75,7 @@ export default function ForWhom() {
               ))}
             </ul>
             <a
-              href="https://app.facilitadordocente.com"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="mailto:facilitadordocenteuy@gmail.com?subject=Solicitud%20Plan%20Institucional%20%E2%80%94%20Facilitador%20Docente&body=Hola%2C%0A%0AMe%20comunico%20desde%20%5Bnombre%20de%20la%20instituci%C3%B3n%5D%20para%20solicitar%20informaci%C3%B3n%20sobre%20el%20Plan%20Institucional%20de%20Facilitador%20Docente.%0A%0AQuedo%20a%20la%20espera%20de%20su%20respuesta.%0A%0ASaludos%2C%0A%5BTu%20nombre%5D"
               className="inline-flex items-center gap-2 text-stone-700 font-bold hover:text-stone-900 transition-colors"
             >
               Contactar ventas{" "}

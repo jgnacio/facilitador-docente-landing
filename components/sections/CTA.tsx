@@ -19,7 +19,7 @@ export default function CTA() {
           >
             Acceder a Facilitador Docente
           </a>
-          <p className="text-sm text-stone-400">Empezá gratis. Sin tarjeta de crédito.</p>
+          <p className="text-sm text-stone-400">Desde $400/mes. Cancelá cuando quieras.</p>
         </div>
       </div>
     </section>

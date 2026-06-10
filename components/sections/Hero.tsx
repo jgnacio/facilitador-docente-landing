@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function Hero() {
   return (
     <>
@@ -39,7 +37,7 @@ export default function Hero() {
             rel="noopener noreferrer"
             className="bg-primary text-white px-8 py-3.5 rounded-lg font-medium hover:bg-primary-hover transition-colors w-full sm:w-auto shadow-[0_10px_20px_rgba(244,125,49,0.2)]"
           >
-            Empezar a planificar gratis
+            Empezar a planificar
           </a>
           <a
             href="#como-funciona"
@@ -58,14 +56,15 @@ export default function Hero() {
           className="relative max-w-5xl mx-auto rounded-2xl overflow-hidden"
           style={{ boxShadow: "0 20px 40px rgba(156,68,0,0.08)" }}
         >
-          <Image
-            src="/images/mockups/principal.png"
-            alt="Dashboard de Facilitador Docente — Tu espacio de planificación docente"
-            width={1400}
-            height={875}
-            className="w-full h-auto block"
-            priority
-          />
+          <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
+            <iframe
+              src="https://www.youtube.com/embed/uJdiDcgr2w4?autoplay=0&loop=1&playlist=uJdiDcgr2w4&controls=1&rel=0&modestbranding=1"
+              allow="autoplay; encrypted-media"
+              allowFullScreen
+              className="absolute inset-0 w-full h-full"
+              title="Demo Facilitador Docente"
+            />
+          </div>
         </div>
       </div>
     </section>

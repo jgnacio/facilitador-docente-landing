@@ -2,7 +2,7 @@
 
 import { sendGAEvent } from "@next/third-parties/google";
 
-function HoneyJar({ fill }: { fill: "empty" | "low" | "mid" | "full" }) {
+function HoneyJar({ fill }: { fill: "empty" | "low" | "mid" | "full" | "brim" }) {
   const fills = {
     empty: (
       <path
@@ -31,6 +31,12 @@ function HoneyJar({ fill }: { fill: "empty" | "low" | "mid" | "full" }) {
         fill="#F47D31"
       />
     ),
+    brim: (
+      <path
+        d="M30 20 L70 20 L75 30 L75 80 Q75 88 65 88 L35 88 Q25 88 25 80 L25 30 Z"
+        fill="#F47D31"
+      />
+    ),
   };
 
   return (
@@ -47,9 +53,66 @@ function HoneyJar({ fill }: { fill: "empty" | "low" | "mid" | "full" }) {
   );
 }
 
+function GlowHoneyJar({ size, gradId, delay }: { size: string; gradId: string; delay: string }) {
+  const clipId = `clip-${gradId}`;
+  return (
+    <div className={`${size} honey-glow`} style={{ animationDelay: delay }}>
+      <svg className="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 100 100">
+        <defs>
+          <clipPath id={clipId}>
+            <path d="M30 20 L70 20 L75 30 L75 80 Q75 88 65 88 L35 88 Q25 88 25 80 L25 30 Z" />
+          </clipPath>
+          <linearGradient id={gradId} x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%"   stopColor="#E8621A" />
+            <stop offset="35%"  stopColor="#F47D31" />
+            <stop offset="55%"  stopColor="#F99558" />
+            <stop offset="65%"  stopColor="#F47D31" />
+            <stop offset="100%" stopColor="#D95E18" />
+          </linearGradient>
+        </defs>
+        <path
+          d="M30 20 L70 20 L75 30 L75 80 Q75 90 65 90 L35 90 Q25 90 25 80 L25 30 Z"
+          fill="white"
+          stroke="#e5e7eb"
+          strokeWidth="4"
+        />
+        <path d="M35 15 L65 15 L65 20 L35 20 Z" fill="#e5e7eb" />
+        <g clipPath={`url(#${clipId})`}>
+          <rect
+            x="-80" y="-80"
+            width="260" height="260"
+            fill={`url(#${gradId})`}
+            style={{
+              animation: `honeySlide 1s ${delay} cubic-bezier(0.4, 0, 0.2, 1) infinite alternate`,
+            }}
+          />
+        </g>
+        <path
+          d="M30 20 L70 20 L75 30 L75 80 Q75 88 65 88 L35 88 Q25 88 25 80 L25 30 Z"
+          fill="none"
+        />
+      </svg>
+    </div>
+  );
+}
+
+function MultiHoneyJar() {
+  return (
+    <div className="flex items-end justify-center">
+      <GlowHoneyJar size="w-14 h-14 -mr-1" gradId="honey-grad-l" delay="0s" />
+      <GlowHoneyJar size="w-24 h-24" gradId="honey-grad-c" delay="0s" />
+      <GlowHoneyJar size="w-14 h-14 -ml-1" gradId="honey-grad-r" delay="0s" />
+    </div>
+  );
+}
+
+const MAILTO_INSTITUCIONAL =
+  "mailto:facilitadordocenteuy@gmail.com?subject=Solicitud%20Plan%20Institucional%20%E2%80%94%20Facilitador%20Docente&body=Hola%2C%0A%0AMe%20comunico%20desde%20%5Bnombre%20de%20la%20instituci%C3%B3n%5D%20para%20solicitar%20informaci%C3%B3n%20sobre%20el%20Plan%20Institucional%20de%20Facilitador%20Docente.%0A%0AQuedo%20a%20la%20espera%20de%20su%20respuesta.%0A%0ASaludos%2C%0A%5BTu%20nombre%5D";
+
 const plans = [
   {
-    name: "Plus",
+    name: "PLUS",
+    playfair: false,
     price: "$400",
     period: "/mes",
     fill: "mid" as const,
@@ -63,26 +126,61 @@ const plans = [
       { text: "Adaptaciones curriculares", included: true },
     ],
     cta: "Suscribirse",
+    href: "https://app.facilitadordocente.com",
     ctaClass:
       "block w-full py-2.5 px-4 text-center border border-primary text-primary rounded-lg font-medium hover:bg-orange-50 transition-colors",
   },
   {
-    name: "Max",
+    name: "MAX",
+    playfair: false,
+    animated: true,
     price: "$800",
     period: "/mes",
     fill: "full" as const,
     highlighted: true,
-    badge: "Más completo",
+    badge: "Más popular",
     subtext: "Pesos uruguayos · vía Mercado Pago",
     features: [
-      { text: "Todo lo de Plus", included: true },
+      { text: "Planificaciones ilimitadas", included: true },
+      { text: "Asistente IA", included: true },
+      { text: "Exportación PDF", included: true },
+      { text: "Adaptaciones curriculares", included: true },
+      { text: "Descripciones fundadas", included: true },
       { text: "Modelos de IA Avanzados", included: true },
       { text: "Acceso anticipado a funcionalidades nuevas", included: true },
       { text: "Soporte prioritario", included: true },
     ],
     cta: "Suscribirse",
+    href: "https://app.facilitadordocente.com",
     ctaClass:
-      "block w-full py-2.5 px-4 text-center bg-primary text-white rounded-lg font-medium hover:bg-primary-hover transition-colors shadow-md",
+      "block w-full py-2.5 px-4 text-center bg-primary text-white rounded-lg font-medium hover:bg-primary-hover transition-colors button-glow",
+  },
+  {
+    name: "Institucional",
+    playfair: false,
+    price: null,
+    period: null,
+    fill: "full" as const,
+    multiJar: true,
+    highlighted: false,
+    badge: "Para directivos",
+    subtext: "Precio a consultar",
+    features: [
+      { text: "Planificaciones ilimitadas", included: true },
+      { text: "Asistente IA", included: true },
+      { text: "Exportación PDF", included: true },
+      { text: "Adaptaciones curriculares", included: true },
+      { text: "Descripciones fundadas", included: true },
+      { text: "Modelos de IA Avanzados", included: true },
+      { text: "Acceso anticipado a funcionalidades nuevas", included: true },
+      { text: "Soporte prioritario", included: true },
+      { text: "Seguimiento de progreso por alumno", included: true },
+      { text: "Panel directivo con métricas del centro", included: true },
+    ],
+    cta: "Consultar",
+    href: MAILTO_INSTITUCIONAL,
+    ctaClass:
+      "block w-full py-2.5 px-4 text-center border border-primary text-primary rounded-lg font-medium hover:bg-orange-50 transition-colors",
   },
 ];
 
@@ -99,13 +197,13 @@ export default function Pricing() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {plans.map((plan) => (
             <div
               key={plan.name}
               className={`bg-white rounded-2xl p-6 flex flex-col relative ${
                 plan.highlighted
-                  ? "border-2 border-primary shadow-xl md:-translate-y-4"
+                  ? "border-2 border-primary md:-translate-y-4 border-glow"
                   : "border border-stone-200 shadow-sm"
               }`}
             >
@@ -115,41 +213,57 @@ export default function Pricing() {
                 </div>
               )}
 
-              <div className={`h-24 w-24 mx-auto mb-4 relative ${plan.badge ? "mt-2" : ""}`}>
-                <HoneyJar fill={plan.fill} />
+              <div className={`mx-auto mb-4 ${"multiJar" in plan && plan.multiJar ? "w-full" : "h-24 w-24 relative"} ${plan.badge ? "mt-2" : ""}`}>
+                {"multiJar" in plan && plan.multiJar
+                  ? <MultiHoneyJar />
+                  : "animated" in plan && plan.animated
+                  ? <GlowHoneyJar size="w-24 h-24" gradId="honey-grad-max" delay="0s" />
+                  : <HoneyJar fill={plan.fill} />}
               </div>
 
-              <h3 className="text-xl font-bold text-stone-900 text-center mb-2">{plan.name}</h3>
+              <h3
+                className={`text-xl font-bold text-stone-900 text-center mb-2 ${
+                  plan.playfair
+                    ? "font-[family-name:var(--font-playfair)]"
+                    : ""
+                }`}
+              >
+                {plan.name}
+              </h3>
+
               <div className="text-center mb-2">
-                <span className="text-3xl font-bold">{plan.price}</span>
-                <span className="text-stone-500 text-sm">{plan.period}</span>
+                {plan.price ? (
+                  <>
+                    <span className="text-3xl font-bold">{plan.price}</span>
+                    <span className="text-stone-500 text-sm">{plan.period}</span>
+                  </>
+                ) : (
+                  <span className="text-xl font-semibold text-stone-700">Precio a consultar</span>
+                )}
               </div>
 
-              {plan.subtext && (
+              {plan.subtext && plan.price && (
                 <div className="text-center mb-6 text-xs text-primary font-medium">
                   {plan.subtext}
                 </div>
               )}
-              {!plan.subtext && <div className="mb-6" />}
+              {(!plan.subtext || !plan.price) && <div className="mb-6" />}
 
               <ul className="space-y-3 mb-8 flex-1 text-sm text-stone-600">
-                {plan.features.map((f, i) => {
-                  if (f.included === null) return <li key={i} className="h-5" />;
-                  return (
-                    <li key={i} className={`flex items-start gap-2 ${!f.included ? "text-stone-400" : ""}`}>
-                      <span className="material-symbols-outlined text-[18px] text-primary">
-                        {f.included ? "check" : "close"}
-                      </span>
-                      {f.text}
-                    </li>
-                  );
-                })}
+                {plan.features.map((f, i) => (
+                  <li key={i} className={`flex items-start gap-2 ${!f.included ? "text-stone-400" : ""}`}>
+                    <span className="material-symbols-outlined text-[18px] text-primary">
+                      {f.included ? "check" : "close"}
+                    </span>
+                    {f.text}
+                  </li>
+                ))}
               </ul>
 
               <a
-                href="https://app.facilitadordocente.com"
-                target="_blank"
-                rel="noopener noreferrer"
+                href={plan.href}
+                target={plan.href.startsWith("mailto") ? undefined : "_blank"}
+                rel={plan.href.startsWith("mailto") ? undefined : "noopener noreferrer"}
                 onClick={() => sendGAEvent({ event: `click_plan_${plan.name.toLowerCase()}` })}
                 className={plan.ctaClass}
               >
