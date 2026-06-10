@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Fraunces, DM_Sans, Playfair_Display } from "next/font/google";
 import CookieBanner from "@/components/CookieBanner";
-import "./globals.css";
+import "../globals.css";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
