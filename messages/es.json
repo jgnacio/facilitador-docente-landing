@@ -1,0 +1,206 @@
+{
+  "Navbar": {
+    "features": "Funcionalidades",
+    "pricing": "Precios",
+    "faq": "FAQ",
+    "cta": "Ingresar",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "langSwitch": "EN"
+  },
+  "Hero": {
+    "headline": "Menos horas de trabajo administrativo.",
+    "headlineAccent": "Más horas de disfrute educativo.",
+    "subheadline": "El Facilitador Docente lee el currículo oficial de ANEP, conoce a tus alumnos, y planifica junto a vos.",
+    "quote": "\"La tecnología por sí misma no es transformativa. Es la escuela, la pedagogía, la que es transformativa.\"",
+    "quoteAuthor": "— Tanya Byron",
+    "ctaPrimary": "Empezar a planificar",
+    "ctaSecondary": "Ver cómo funciona",
+    "statBold": "Dato:",
+    "stat": "Más del 60% de los docentes dedica más de 5hs semanales a planificar.",
+    "videoTitle": "Demo Facilitador Docente"
+  },
+  "Problem": {
+    "heading": "Conocemos la realidad del aula",
+    "subheading": "Sabemos que el tiempo frente al grupo es solo la mitad del trabajo. La burocracia y la planificación se llevan tu tiempo libre.",
+    "items": {
+      "0": {
+        "title": "Domingos perdidos",
+        "description": "Horas frente a la pantalla intentando encajar actividades en los formatos exigidos, robándole tiempo a tu familia y descanso."
+      },
+      "1": {
+        "title": "La presión del EBI",
+        "description": "Navegar por las nuevas competencias, metas de aprendizaje y criterios de logro de ANEP buscando cómo justificar cada actividad."
+      },
+      "2": {
+        "title": "Requerimientos administrativos",
+        "description": "Adaptaciones curriculares, informes de desempeño, grillas de evaluación... papeleo interminable que te aleja de la pedagogía."
+      }
+    }
+  },
+  "Features": {
+    "heading": "Herramientas pensadas para tu día a día",
+    "subheading": "Todo lo que necesitás para gestionar tus clases, integrado en un solo lugar.",
+    "items": {
+      "0": {
+        "title": "Planificaciones EBI",
+        "description": "Genera secuencias didácticas alineadas con las competencias específicas, generales y criterios de logro del nuevo marco curricular."
+      },
+      "1": {
+        "title": "Soporte Multigrado",
+        "description": "Crea propuestas que integran diferentes niveles en una misma actividad, ideal para escuelas rurales o aulas heterogéneas."
+      },
+      "2": {
+        "title": "Adaptaciones Curriculares",
+        "description": "Genera variantes de tus actividades adaptadas para estudiantes con necesidades educativas especiales en un clic."
+      },
+      "3": {
+        "title": "Rúbricas Automáticas",
+        "description": "Obtené grillas de evaluación detalladas y rúbricas que conectan directamente con los criterios de logro seleccionados."
+      },
+      "4": {
+        "title": "Asistente IA Chat",
+        "description": "Un chatbot entrenado específicamente con documentos de ANEP para resolver tus dudas sobre el programa al instante."
+      },
+      "5": {
+        "title": "Explorador EBI",
+        "description": "Navega fácilmente por el programa oficial. Filtra, busca y encuentra rápidamente competencias y contenidos."
+      }
+    }
+  },
+  "HowItWorks": {
+    "heading": "Planificación que respeta el programa ANEP.",
+    "subheading": "El proceso importa. No es magia, es una herramienta pensada para maestras que asegura que cada clase tenga intención curricular.",
+    "steps": {
+      "0": {
+        "title": "Primero, mapea el currículo",
+        "quote": "\"Sabés que el plan tiene fundamento — cada actividad está anclada al programa oficial.\"",
+        "description": "Identifica las Competencias Específicas y Criterios de Logro que corresponden a tu grado y espacio. No es un chat genérico. Conoce la diferencia entre Tramo 3 y Tramo 4."
+      },
+      "1": {
+        "title": "Después, conoce tu grupo",
+        "quote": "\"¿Con qué temática querés trabajar la actividad?\"",
+        "description": "Considera los alumnos reales que cargaste, no un \"grupo genérico\". El agente te sugiere un contenido y te dice de dónde viene en el currículo ANEP."
+      },
+      "2": {
+        "title": "Recién ahí, genera la planificación",
+        "description": "Aparece la planificación completa — Inicio, Desarrollo y Cierre — con referencias exactas a qué parte del programa oficial respalda cada actividad.",
+        "actionSave": "Sí, guardar",
+        "actionSkip": "No por ahora"
+      }
+    },
+    "summaryBold": "En total: 3 mensajes del docente.",
+    "summary": "El asistente hace el trabajo pesado — currículo, metodología, diferenciaciones por alumno. Tú aportás tu conocimiento del contexto real del aula.",
+    "imageAlt": "Agente IA de Facilitador Docente planificando con competencias específicas del currículo ANEP"
+  },
+  "ForWhom": {
+    "individualHeading": "Para el docente individual",
+    "individualCta": "Ver planes individuales",
+    "institutionHeading": "Para instituciones",
+    "institutionCta": "Contactar ventas",
+    "individual": {
+      "0": { "title": "Ahorro de tiempo masivo", "desc": "Reduce el tiempo de planificación semanal de horas a minutos." },
+      "1": { "title": "Tranquilidad administrativa", "desc": "Documentación siempre al día y alineada al formato que exige dirección." },
+      "2": { "title": "Inspiración constante", "desc": "Nuevas ideas para abordar temas difíciles o repetitivos." }
+    },
+    "institution": {
+      "0": { "title": "Estandarización", "desc": "Formatos unificados para todo el equipo docente del centro." },
+      "1": { "title": "Banco de recursos compartido", "desc": "Los docentes pueden compartir y reutilizar planificaciones exitosas." },
+      "2": { "title": "Gestión de licencias", "desc": "Administración centralizada de cuentas para todo el staff." }
+    }
+  },
+  "Pricing": {
+    "heading": "Invertí en tu tiempo libre",
+    "subheading": "Pagos seguros mensuales o anuales vía Mercado Pago Uruguay.",
+    "perMonth": "/mes",
+    "priceConsult": "Precio a consultar",
+    "subscribe": "Suscribirse",
+    "consult": "Consultar",
+    "mostPopular": "Más popular",
+    "forDirectors": "Para directivos",
+    "uyu": "Pesos uruguayos · vía Mercado Pago",
+    "plusFeatures": {
+      "0": "Planificaciones ilimitadas",
+      "1": "Asistente IA",
+      "2": "Exportación PDF",
+      "3": "Adaptaciones curriculares"
+    },
+    "maxFeatures": {
+      "0": "Planificaciones ilimitadas",
+      "1": "Asistente IA",
+      "2": "Exportación PDF",
+      "3": "Adaptaciones curriculares",
+      "4": "Descripciones fundadas",
+      "5": "Modelos de IA Avanzados",
+      "6": "Acceso anticipado a funcionalidades nuevas",
+      "7": "Soporte prioritario"
+    },
+    "instFeatures": {
+      "0": "Planificaciones ilimitadas",
+      "1": "Asistente IA",
+      "2": "Exportación PDF",
+      "3": "Adaptaciones curriculares",
+      "4": "Descripciones fundadas",
+      "5": "Modelos de IA Avanzados",
+      "6": "Acceso anticipado a funcionalidades nuevas",
+      "7": "Soporte prioritario",
+      "8": "Seguimiento de progreso por alumno",
+      "9": "Panel directivo con métricas del centro"
+    }
+  },
+  "FAQ": {
+    "heading": "Preguntas Frecuentes",
+    "items": {
+      "0": {
+        "question": "¿El agente conoce el programa oficial de ANEP?",
+        "answer": "Sí. El asistente tiene integrado el currículo oficial de ANEP vigente. Mapea directamente las Competencias Específicas y Criterios de Logro que corresponden a tu grado y espacio antes de sugerir actividades."
+      },
+      "1": {
+        "question": "¿Puedo planificar para mis alumnos específicos?",
+        "answer": "Absolutamente. Considera la realidad del grupo que cargaste, no un 'grupo genérico'. Si tenés alumnos con necesidades específicas de apoyo, el agente genera diferenciaciones pedagógicas reales para ellos."
+      },
+      "2": {
+        "question": "¿Cómo sé que la planificación está alineada al currículo?",
+        "answer": "El agente te indica exactamente de qué parte del programa oficial proviene cada contenido sugerido. Las actividades propuestas se anclan directamente a las metas de aprendizaje y criterios de logro."
+      },
+      "3": {
+        "question": "¿Funciona para 3° a 6° grado EBI?",
+        "answer": "Sí, está diseñado específicamente para maestras del Tramo 3 y Tramo 4 de Educación Básica Integrada (3° a 6° grado de primaria), respetando las características de estas edades."
+      },
+      "4": {
+        "question": "¿Qué son las Competencias Específicas y cómo las usa el agente?",
+        "answer": "Son los aprendizajes que el currículo espera desarrollar en cada espacio. El agente no te pide que las busques o las ingreses de memoria; las identifica automáticamente a partir de tu intención pedagógica y las integra en el diseño de la clase."
+      }
+    }
+  },
+  "CTA": {
+    "heading": "Recuperá tus fines de semana.",
+    "subheading": "La docencia es tu vocación. La burocracia no debería serlo. Uníte a cientos de docentes en Uruguay que ya planifican más rápido y mejor.",
+    "cta": "Acceder a Facilitador Docente",
+    "footnote": "Desde $400/mes. Cancelá cuando quieras."
+  },
+  "Footer": {
+    "privacy": "Privacidad",
+    "terms": "Términos",
+    "contact": "Contacto",
+    "help": "Ayuda",
+    "cookieSettings": "Configurar cookies",
+    "copyright": "© 2025 Facilitador Docente. Hecho en Uruguay 🇺🇾"
+  },
+  "CookieBanner": {
+    "text": "Usamos cookies de analítica (Google Analytics) para entender cómo se usa el sitio y mejorarlo. Podés aceptarlas o rechazarlas. Más info en nuestra",
+    "privacyLink": "Política de Privacidad",
+    "reject": "Rechazar",
+    "accept": "Aceptar"
+  },
+  "Contacto": {
+    "title": "Contacto | Facilitador Docente",
+    "description": "Contactá al equipo de Facilitador Docente para consultas, soporte o información sobre el Plan Institucional.",
+    "heading": "Contacto",
+    "subheading": "¿Tenés preguntas sobre el servicio, necesitás soporte o querés información sobre el Plan Institucional? Escribinos directamente.",
+    "generalLabel": "Soporte general",
+    "institutionalLabel": "Plan Institucional",
+    "institutionalLink": "Consultar sobre Plan Institucional →",
+    "footnote": "Respondemos en menos de 48 horas hábiles."
+  }
+}

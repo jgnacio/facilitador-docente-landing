@@ -3,7 +3,13 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Política de Privacidad | Facilitador Docente",
   description: "Cómo recopilamos, usamos y protegemos tus datos en Facilitador Docente.",
-  alternates: { canonical: "https://facilitadordocente.com/privacidad" },
+  alternates: {
+    canonical: "https://facilitadordocente.com/privacidad",
+    languages: {
+      es: "https://facilitadordocente.com/privacidad",
+      en: "https://facilitadordocente.com/en/privacidad",
+    },
+  },
 };
 
 export default function Privacidad() {

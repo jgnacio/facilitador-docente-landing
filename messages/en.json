@@ -1,0 +1,206 @@
+{
+  "Navbar": {
+    "features": "Features",
+    "pricing": "Pricing",
+    "faq": "FAQ",
+    "cta": "Sign in",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "langSwitch": "ES"
+  },
+  "Hero": {
+    "headline": "Less time on administrative work.",
+    "headlineAccent": "More time for real teaching.",
+    "subheadline": "Facilitador Docente reads Uruguay's official ANEP curriculum, knows your students, and plans alongside you.",
+    "quote": "\"Technology by itself is not transformative. It's the school, the pedagogy, that is transformative.\"",
+    "quoteAuthor": "— Tanya Byron",
+    "ctaPrimary": "Start planning",
+    "ctaSecondary": "See how it works",
+    "statBold": "Fact:",
+    "stat": "More than 60% of teachers spend over 5 hours a week on lesson planning.",
+    "videoTitle": "Facilitador Docente demo"
+  },
+  "Problem": {
+    "heading": "We know your reality",
+    "subheading": "Time in the classroom is only half the job. Bureaucracy and planning eat your free time.",
+    "items": {
+      "0": {
+        "title": "Weekends lost",
+        "description": "Hours in front of a screen trying to fit activities into required formats, stealing time from your family and rest."
+      },
+      "1": {
+        "title": "The EBI pressure",
+        "description": "Navigating the new competencies, learning goals, and achievement criteria of ANEP's curriculum while trying to justify every activity."
+      },
+      "2": {
+        "title": "Administrative demands",
+        "description": "Curricular adaptations, performance reports, assessment grids... endless paperwork keeping you away from actual pedagogy."
+      }
+    }
+  },
+  "Features": {
+    "heading": "Tools built for your everyday",
+    "subheading": "Everything you need to manage your classes, all in one place.",
+    "items": {
+      "0": {
+        "title": "EBI Lesson Plans",
+        "description": "Generate teaching sequences aligned with the specific competencies, general competencies, and achievement criteria of the new curriculum framework."
+      },
+      "1": {
+        "title": "Multi-grade Support",
+        "description": "Create proposals that integrate different levels in the same activity — ideal for rural schools or mixed-grade classrooms."
+      },
+      "2": {
+        "title": "Curricular Adaptations",
+        "description": "Generate variants of your activities adapted for students with special educational needs in one click."
+      },
+      "3": {
+        "title": "Automatic Rubrics",
+        "description": "Get detailed assessment grids and rubrics directly connected to the selected achievement criteria."
+      },
+      "4": {
+        "title": "AI Chat Assistant",
+        "description": "A chatbot trained specifically with ANEP documents to answer your questions about the curriculum instantly."
+      },
+      "5": {
+        "title": "EBI Explorer",
+        "description": "Navigate the official curriculum easily. Filter, search, and quickly find competencies and content."
+      }
+    }
+  },
+  "HowItWorks": {
+    "heading": "Planning that respects the ANEP curriculum.",
+    "subheading": "The process matters. It's not magic — it's a tool built for teachers that ensures every class has curricular intent.",
+    "steps": {
+      "0": {
+        "title": "First, maps the curriculum",
+        "quote": "\"You know the plan has a solid foundation — every activity is anchored to the official program.\"",
+        "description": "Identifies the Specific Competencies and Achievement Criteria for your grade and subject. This is not a generic chatbot. It knows the difference between Tramo 3 and Tramo 4."
+      },
+      "1": {
+        "title": "Then, gets to know your class",
+        "quote": "\"What topic would you like to work on for this activity?\"",
+        "description": "Considers the real students you've entered, not a \"generic group\". The agent suggests content and tells you where it comes from in the ANEP curriculum."
+      },
+      "2": {
+        "title": "Only then, generates the lesson plan",
+        "description": "The complete lesson plan appears — Introduction, Development, and Closure — with exact references to which part of the official program supports each activity.",
+        "actionSave": "Yes, save",
+        "actionSkip": "Not now"
+      }
+    },
+    "summaryBold": "Total: 3 messages from the teacher.",
+    "summary": "The assistant does the heavy lifting — curriculum, methodology, per-student differentiation. You contribute your knowledge of the real classroom context.",
+    "imageAlt": "Facilitador Docente AI agent planning with specific competencies from the ANEP curriculum"
+  },
+  "ForWhom": {
+    "individualHeading": "For individual teachers",
+    "individualCta": "See individual plans",
+    "institutionHeading": "For institutions",
+    "institutionCta": "Contact sales",
+    "individual": {
+      "0": { "title": "Massive time savings", "desc": "Reduce weekly planning time from hours to minutes." },
+      "1": { "title": "Administrative peace of mind", "desc": "Documentation always up to date and aligned with the format your director requires." },
+      "2": { "title": "Constant inspiration", "desc": "New ideas for approaching difficult or repetitive topics." }
+    },
+    "institution": {
+      "0": { "title": "Standardization", "desc": "Unified formats across the entire teaching team." },
+      "1": { "title": "Shared resource bank", "desc": "Teachers can share and reuse successful lesson plans." },
+      "2": { "title": "License management", "desc": "Centralized account administration for all staff." }
+    }
+  },
+  "Pricing": {
+    "heading": "Invest in your free time",
+    "subheading": "Secure monthly or annual payments via Mercado Pago Uruguay.",
+    "perMonth": "/mo",
+    "priceConsult": "Price on request",
+    "subscribe": "Subscribe",
+    "consult": "Contact us",
+    "mostPopular": "Most popular",
+    "forDirectors": "For directors",
+    "uyu": "Uruguayan pesos · via Mercado Pago",
+    "plusFeatures": {
+      "0": "Unlimited lesson plans",
+      "1": "AI assistant",
+      "2": "PDF export",
+      "3": "Curricular adaptations"
+    },
+    "maxFeatures": {
+      "0": "Unlimited lesson plans",
+      "1": "AI assistant",
+      "2": "PDF export",
+      "3": "Curricular adaptations",
+      "4": "Grounded descriptions",
+      "5": "Advanced AI models",
+      "6": "Early access to new features",
+      "7": "Priority support"
+    },
+    "instFeatures": {
+      "0": "Unlimited lesson plans",
+      "1": "AI assistant",
+      "2": "PDF export",
+      "3": "Curricular adaptations",
+      "4": "Grounded descriptions",
+      "5": "Advanced AI models",
+      "6": "Early access to new features",
+      "7": "Priority support",
+      "8": "Per-student progress tracking",
+      "9": "Director dashboard with school metrics"
+    }
+  },
+  "FAQ": {
+    "heading": "Frequently Asked Questions",
+    "items": {
+      "0": {
+        "question": "Does the agent know the official ANEP program?",
+        "answer": "Yes. The assistant has the current official ANEP curriculum fully integrated. It directly maps the Specific Competencies and Achievement Criteria for your grade and subject before suggesting activities."
+      },
+      "1": {
+        "question": "Can I plan for my specific students?",
+        "answer": "Absolutely. It considers the real group you've entered, not a 'generic group'. If you have students with specific support needs, the agent generates real pedagogical differentiation for them."
+      },
+      "2": {
+        "question": "How do I know the plan is aligned with the curriculum?",
+        "answer": "The agent tells you exactly which part of the official program each suggested content comes from. Proposed activities are anchored directly to the learning goals and achievement criteria."
+      },
+      "3": {
+        "question": "Does it work for 3rd to 6th grade EBI?",
+        "answer": "Yes, it's designed specifically for teachers in Tramo 3 and Tramo 4 of Educación Básica Integrada (3rd to 6th grade of primary school), respecting the characteristics of these age groups."
+      },
+      "4": {
+        "question": "What are Specific Competencies and how does the agent use them?",
+        "answer": "They are the learnings the curriculum expects to develop in each subject area. The agent doesn't ask you to look them up or memorize them — it identifies them automatically from your pedagogical intent and integrates them into the lesson design."
+      }
+    }
+  },
+  "CTA": {
+    "heading": "Get your weekends back.",
+    "subheading": "Teaching is your calling. Bureaucracy shouldn't be. Join hundreds of teachers in Uruguay who already plan faster and better.",
+    "cta": "Access Facilitador Docente",
+    "footnote": "From $400 UYU/month. Cancel anytime."
+  },
+  "Footer": {
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "contact": "Contact",
+    "help": "Help",
+    "cookieSettings": "Cookie settings",
+    "copyright": "© 2025 Facilitador Docente. Made in Uruguay 🇺🇾"
+  },
+  "CookieBanner": {
+    "text": "We use analytics cookies (Google Analytics) to understand how the site is used and improve it. You can accept or reject them. More info in our",
+    "privacyLink": "Privacy Policy",
+    "reject": "Reject",
+    "accept": "Accept"
+  },
+  "Contacto": {
+    "title": "Contact | Facilitador Docente",
+    "description": "Contact the Facilitador Docente team for inquiries, support, or information about the Institutional Plan.",
+    "heading": "Contact",
+    "subheading": "Do you have questions about the service, need support, or want information about the Institutional Plan? Write to us directly.",
+    "generalLabel": "General support",
+    "institutionalLabel": "Institutional Plan",
+    "institutionalLink": "Inquire about Institutional Plan →",
+    "footnote": "We respond within 48 business hours."
+  }
+}

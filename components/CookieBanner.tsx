@@ -1,15 +1,10 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
 const GA_ID = "G-04PKCN4MXE";
-
-declare global {
-  interface Window {
-    dataLayer: unknown[];
-    gtag: (...args: unknown[]) => void;
-  }
-}
 
 function activarGA() {
   window.gtag("consent", "update", { analytics_storage: "granted" });
@@ -25,12 +20,13 @@ function activarGA() {
 }
 
 export default function CookieBanner() {
+  const t = useTranslations("CookieBanner");
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    window.dataLayer = window.dataLayer || [];
+    const dataLayer = (window.dataLayer = window.dataLayer || []);
     window.gtag = function (...args: unknown[]) {
-      window.dataLayer.push(args);
+      dataLayer.push(args);
     };
 
     window.gtag("consent", "default", {
@@ -69,11 +65,10 @@ export default function CookieBanner() {
     <div className="fixed bottom-0 left-0 right-0 z-[9999] bg-dark-bg border-t border-stone-800 px-6 py-4">
       <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
         <p className="text-stone-400 text-sm max-w-2xl leading-relaxed">
-          Usamos cookies de analítica (Google Analytics) para entender cómo se usa el sitio y
-          mejorarlo. Podés aceptarlas o rechazarlas. Más info en nuestra{" "}
-          <a href="/privacidad" className="text-white underline hover:text-primary transition-colors">
-            Política de Privacidad
-          </a>
+          {t("text")}{" "}
+          <Link href="/privacidad" className="text-white underline hover:text-primary transition-colors">
+            {t("privacyLink")}
+          </Link>
           .
         </p>
         <div className="flex gap-3 shrink-0">
@@ -81,13 +76,13 @@ export default function CookieBanner() {
             onClick={rechazar}
             className="px-5 py-2 rounded-lg border border-stone-600 text-stone-300 text-sm hover:border-stone-400 hover:text-white transition-colors"
           >
-            Rechazar
+            {t("reject")}
           </button>
           <button
             onClick={aceptar}
             className="px-5 py-2 rounded-lg bg-primary text-white text-sm font-semibold hover:bg-primary-hover transition-colors"
           >
-            Aceptar
+            {t("accept")}
           </button>
         </div>
       </div>

@@ -1,44 +1,43 @@
 import Image from "next/image";
+import { getTranslations } from "next-intl/server";
 
-const steps = [
-  {
-    number: "1",
-    title: "Primero, mapea el currículo",
-    quote: '"Sabés que el plan tiene fundamento — cada actividad está anclada al programa oficial."',
-    description:
-      "Identifica las Competencias Específicas y Criterios de Logro que corresponden a tu grado y espacio. No es un chat genérico. Conoce la diferencia entre Tramo 3 y Tramo 4.",
-  },
-  {
-    number: "2",
-    title: "Después, conoce tu grupo",
-    quote: '"¿Con qué temática querés trabajar la actividad?"',
-    description:
-      "Considera los alumnos reales que cargaste, no un \"grupo genérico\". El agente te sugiere un contenido y te dice de dónde viene en el currículo ANEP.",
-  },
-  {
-    number: "3",
-    title: "Recién ahí, genera la planificación",
-    description:
-      "Aparece la planificación completa — Inicio, Desarrollo y Cierre — con referencias exactas a qué parte del programa oficial respalda cada actividad.",
-    actions: ["Sí, guardar", "No por ahora"],
-  },
-];
+export default async function HowItWorks() {
+  const t = await getTranslations("HowItWorks");
 
-export default function HowItWorks() {
+  const steps = [
+    {
+      number: "1",
+      title: t("steps.0.title"),
+      quote: t("steps.0.quote"),
+      description: t("steps.0.description"),
+    },
+    {
+      number: "2",
+      title: t("steps.1.title"),
+      quote: t("steps.1.quote"),
+      description: t("steps.1.description"),
+    },
+    {
+      number: "3",
+      title: t("steps.2.title"),
+      description: t("steps.2.description"),
+      actions: [t("steps.2.actionSave"), t("steps.2.actionSkip")],
+    },
+  ];
+
   return (
     <section className="py-24 px-6 bg-light-bg text-stone-800" id="como-funciona">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="font-headline text-3xl md:text-5xl text-stone-900 mb-6">
-            Planificación que respeta el programa ANEP.
+            {t("heading")}
           </h2>
           <p className="text-lg max-w-2xl mx-auto text-stone-600">
-            El proceso importa. No es magia, es una herramienta pensada para maestras que asegura que cada clase tenga intención curricular.
+            {t("subheading")}
           </p>
         </div>
 
         <div className="flex flex-col lg:flex-row gap-12 items-start">
-          {/* Steps */}
           <div className="flex-1 space-y-10">
             {steps.map((step) => (
               <div key={step.number} className="flex gap-6">
@@ -76,18 +75,15 @@ export default function HowItWorks() {
               </div>
             ))}
 
-            {/* Resumen final */}
             <div
-              className="ml-18 p-4 rounded-xl text-sm text-stone-600 leading-relaxed"
+              className="p-4 rounded-xl text-sm text-stone-600 leading-relaxed"
               style={{ background: "rgba(244,125,49,0.05)", marginLeft: "72px" }}
             >
-              <span className="font-semibold text-stone-800">En total: 3 mensajes del docente.</span>{" "}
-              El asistente hace el trabajo pesado — currículo, metodología, diferenciaciones por alumno.
-              Tú aportás tu conocimiento del contexto real del aula.
+              <span className="font-semibold text-stone-800">{t("summaryBold")}</span>{" "}
+              {t("summary")}
             </div>
           </div>
 
-          {/* Mockup real — agenteIA */}
           <div className="flex-1 w-full max-w-md lg:max-w-none">
             <div
               className="rounded-2xl overflow-hidden"
@@ -98,7 +94,7 @@ export default function HowItWorks() {
             >
               <Image
                 src="/images/mockups/agenteIA.png"
-                alt="Agente IA de Facilitador Docente planificando con competencias específicas del currículo ANEP"
+                alt={t("imageAlt")}
                 width={1400}
                 height={875}
                 className="w-full h-auto block"

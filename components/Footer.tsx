@@ -1,7 +1,11 @@
 import Image from "next/image";
+import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import CookieSettingsButton from "./CookieSettingsButton";
 
-export default function Footer() {
+export default async function Footer() {
+  const t = await getTranslations("Footer");
+
   return (
     <footer className="bg-[#0a0a0a] w-full border-t border-stone-800">
       <div className="flex flex-col md:flex-row justify-between items-center w-full px-8 py-12 max-w-7xl mx-auto gap-8">
@@ -14,19 +18,24 @@ export default function Footer() {
         />
         <div className="flex flex-wrap justify-center gap-6">
           {[
-            { label: "Privacidad", href: "/privacidad" },
-            { label: "Términos", href: "/terminos" },
-            { label: "Contacto", href: "/contacto" },
-            { label: "Ayuda", href: "mailto:facilitadordocenteuy@gmail.com" },
+            { key: "privacy", href: "/privacidad" },
+            { key: "terms", href: "/terminos" },
+            { key: "contact", href: "/contacto" },
           ].map((link) => (
-            <a
-              key={link.label}
+            <Link
+              key={link.key}
               href={link.href}
               className="text-stone-500 hover:text-primary transition-colors text-sm"
             >
-              {link.label}
-            </a>
+              {t(link.key as "privacy" | "terms" | "contact")}
+            </Link>
           ))}
+          <a
+            href="mailto:facilitadordocenteuy@gmail.com"
+            className="text-stone-500 hover:text-primary transition-colors text-sm"
+          >
+            {t("help")}
+          </a>
           <CookieSettingsButton />
           <a
             href="https://www.instagram.com/facilitadordocente_uy"
@@ -41,7 +50,7 @@ export default function Footer() {
           </a>
         </div>
         <div className="text-sm font-headline italic text-stone-500">
-          © 2025 Facilitador Docente. Hecho en Uruguay 🇺🇾
+          {t("copyright")}
         </div>
       </div>
     </footer>

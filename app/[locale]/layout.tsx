@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
 import { Fraunces, DM_Sans, Playfair_Display } from "next/font/google";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
+import { notFound } from "next/navigation";
+import { routing } from "@/i18n/routing";
 import CookieBanner from "@/components/CookieBanner";
 import "../globals.css";
 
@@ -55,10 +59,15 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://facilitadordocente.com",
+    languages: {
+      es: "https://facilitadordocente.com",
+      en: "https://facilitadordocente.com/en",
+    },
   },
   openGraph: {
     title: "Planificá con el currículo de verdad | Facilitador Docente",
-    description: "La IA que conoce el programa oficial de ANEP. Planificá con Competencias Específicas y Criterios de Logro para EBI.",
+    description:
+      "La IA que conoce el programa oficial de ANEP. Planificá con Competencias Específicas y Criterios de Logro para EBI.",
     url: "https://facilitadordocente.com",
     siteName: "Facilitador Docente",
     images: [
@@ -88,13 +97,26 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params,
 }: {
   children: React.ReactNode;
+  params: Promise<{ locale: string }>;
 }) {
+  const { locale } = await params;
+
+  if (!routing.locales.includes(locale as "es" | "en")) {
+    notFound();
+  }
+
+  const messages = await getMessages();
+
   return (
-    <html lang="es" className={`${fraunces.variable} ${dmSans.variable} ${playfair.variable}`}>
+    <html
+      lang={locale}
+      className={`${fraunces.variable} ${dmSans.variable} ${playfair.variable}`}
+    >
       <head>
         <link
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
@@ -118,61 +140,12 @@ export default function RootLayout({
             }),
           }}
         />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              mainEntity: [
-                {
-                  "@type": "Question",
-                  name: "¿El agente conoce el programa oficial de ANEP?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "Sí. El asistente tiene integrado el currículo oficial de ANEP vigente. Mapea directamente las Competencias Específicas y Criterios de Logro que corresponden a tu grado y espacio antes de sugerir actividades.",
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: "¿Puedo planificar para mis alumnos específicos?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "Absolutamente. Considera la realidad del grupo que cargaste, no un grupo genérico. Si tenés alumnos con necesidades específicas de apoyo, el agente genera diferenciaciones pedagógicas reales para ellos.",
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: "¿Cómo sé que la planificación está alineada al currículo?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "El agente te indica exactamente de qué parte del programa oficial proviene cada contenido sugerido. Las actividades propuestas se anclan directamente a las metas de aprendizaje y criterios de logro.",
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: "¿Funciona para 3° a 6° grado EBI?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "Sí, está diseñado específicamente para maestras del Tramo 3 y Tramo 4 de Educación Básica Integrada (3° a 6° grado de primaria).",
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: "¿Qué son las Competencias Específicas y cómo las usa el agente?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "Son los aprendizajes que el currículo espera desarrollar en cada espacio. El agente las identifica automáticamente a partir de tu intención pedagógica y las integra en el diseño de la clase.",
-                  },
-                },
-              ],
-            }),
-          }}
-        />
       </head>
       <body className="bg-light-bg text-stone-900 font-body antialiased">
-        {children}
-        <CookieBanner />
+        <NextIntlClientProvider messages={messages}>
+          {children}
+          <CookieBanner />
+        </NextIntlClientProvider>
       </body>
     </html>
   );

@@ -3,13 +3,10 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { sendGAEvent } from "@next/third-parties/google";
+import { useTranslations } from "next-intl";
+import { useRouter, usePathname } from "@/i18n/navigation";
+import { useLocale } from "next-intl";
 import Image from "next/image";
-
-const NAV_LINKS = [
-  { label: "Funcionalidades", href: "#funcionalidades" },
-  { label: "Precios", href: "#precios" },
-  { label: "FAQ", href: "#faq" },
-];
 
 function HoneycombIcon({ open }: { open: boolean }) {
   const cells = [
@@ -39,8 +36,19 @@ function HoneycombIcon({ open }: { open: boolean }) {
 }
 
 export default function Navbar() {
+  const t = useTranslations("Navbar");
+  const locale = useLocale();
+  const router = useRouter();
+  const pathname = usePathname();
+
   const [isAtTop, setIsAtTop] = useState(true);
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  const NAV_LINKS = [
+    { label: t("features"), href: "#funcionalidades" },
+    { label: t("pricing"), href: "#precios" },
+    { label: t("faq"), href: "#faq" },
+  ];
 
   useEffect(() => {
     const sentinel = document.getElementById("navbar-sentinel");
@@ -53,12 +61,16 @@ export default function Navbar() {
     return () => observer.disconnect();
   }, []);
 
+  function switchLocale() {
+    const next = locale === "es" ? "en" : "es";
+    router.replace(pathname, { locale: next });
+  }
+
   const solid = !isAtTop || mobileOpen;
 
   return (
     <>
       <nav className="fixed top-0 w-full z-50">
-        {/* Fondo — pointer-events:none para no bloquear interacciones en mobile */}
         <div
           className="absolute inset-0"
           style={{
@@ -74,7 +86,6 @@ export default function Navbar() {
           }}
         />
 
-        {/* Línea naranja inferior */}
         <div
           className="absolute bottom-0 left-0 h-[1.5px]"
           style={{
@@ -89,7 +100,6 @@ export default function Navbar() {
         />
 
         <div className="flex justify-between items-center w-full px-5 py-3 max-w-7xl mx-auto relative">
-          {/* Logo */}
           <a href="#inicio" onClick={() => setMobileOpen(false)}>
             <motion.div
               whileHover={{ scale: 1.03 }}
@@ -107,7 +117,6 @@ export default function Navbar() {
             </motion.div>
           </a>
 
-          {/* Desktop links */}
           <div className="hidden md:flex items-center gap-8">
             {NAV_LINKS.map((item) => (
               <motion.a
@@ -129,8 +138,15 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Right: CTA + hamburger */}
           <div className="flex items-center gap-2 sm:gap-3">
+            <button
+              onClick={switchLocale}
+              className="hidden md:flex items-center text-stone-500 hover:text-primary transition-colors text-sm font-medium px-2 py-1 rounded border border-stone-200 hover:border-primary/40"
+              aria-label={`Switch to ${locale === "es" ? "English" : "Español"}`}
+            >
+              {t("langSwitch")}
+            </button>
+
             <motion.a
               href="https://app.facilitadordocente.com"
               target="_blank"
@@ -147,17 +163,16 @@ export default function Navbar() {
                 whileHover={{ x: "200%" }}
                 transition={{ duration: 0.5 }}
               />
-              <span className="relative whitespace-nowrap">Ingresar</span>
+              <span className="relative whitespace-nowrap">{t("cta")}</span>
             </motion.a>
 
-            {/* Hamburger colmena — solo mobile */}
             <button
               type="button"
-              aria-label={mobileOpen ? "Cerrar menú" : "Abrir menú"}
+              aria-label={mobileOpen ? t("closeMenu") : t("openMenu")}
               aria-expanded={mobileOpen}
               className="md:hidden flex items-center justify-center w-11 h-11 rounded-xl -mr-1 touch-manipulation"
               onPointerDown={(e) => {
-                e.preventDefault(); // evita el click subsecuente (doble disparo)
+                e.preventDefault();
                 setMobileOpen((v) => !v);
               }}
             >
@@ -167,7 +182,6 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* Mobile drawer */}
       <AnimatePresence>
         {mobileOpen && (
           <div className="fixed inset-0 z-40 md:hidden">
@@ -214,15 +228,22 @@ export default function Navbar() {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.04 + i * 0.06, duration: 0.2 }}
                   >
-                    <span
-                      className="w-1.5 h-1.5 rounded-full flex-shrink-0"
-                      style={{ backgroundColor: "#F47D31", opacity: 0.5 }}
-                    />
+                    <span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: "#F47D31", opacity: 0.5 }} />
                     {item.label}
                   </motion.a>
                 ))}
 
                 <div className="h-px bg-stone-200 mx-1 my-1" />
+
+                <motion.button
+                  onClick={() => { setMobileOpen(false); switchLocale(); }}
+                  className="mx-1 flex items-center justify-center gap-2 text-stone-600 py-3 rounded-xl font-medium border border-stone-200"
+                  initial={{ opacity: 0, y: 6 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.18, duration: 0.2 }}
+                >
+                  {t("langSwitch")}
+                </motion.button>
 
                 <motion.a
                   href="https://app.facilitadordocente.com"
@@ -230,17 +251,14 @@ export default function Navbar() {
                   rel="noopener noreferrer"
                   onClick={() => { setMobileOpen(false); sendGAEvent({ event: "click_ingresar_navbar_mobile" }); }}
                   className="mx-1 mb-1 flex items-center justify-center gap-2 text-white py-3.5 rounded-xl font-medium relative overflow-hidden"
-                  style={{
-                    backgroundColor: "#F47D31",
-                    boxShadow: "0 4px 14px rgba(244,125,49,0.3)",
-                  }}
+                  style={{ backgroundColor: "#F47D31", boxShadow: "0 4px 14px rgba(244,125,49,0.3)" }}
                   initial={{ opacity: 0, y: 6 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.22, duration: 0.2 }}
                   whileTap={{ scale: 0.98 }}
                 >
                   <span className="material-symbols-outlined text-[18px]">hive</span>
-                  <span>Ingresar</span>
+                  <span>{t("cta")}</span>
                 </motion.a>
               </div>
             </motion.div>

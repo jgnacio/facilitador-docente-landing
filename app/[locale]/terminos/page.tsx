@@ -3,7 +3,13 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Términos de Servicio | Facilitador Docente",
   description: "Condiciones de uso del servicio Facilitador Docente.",
-  alternates: { canonical: "https://facilitadordocente.com/terminos" },
+  alternates: {
+    canonical: "https://facilitadordocente.com/terminos",
+    languages: {
+      es: "https://facilitadordocente.com/terminos",
+      en: "https://facilitadordocente.com/en/terminos",
+    },
+  },
 };
 
 export default function Terminos() {

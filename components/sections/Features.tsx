@@ -1,52 +1,25 @@
-const features = [
-  {
-    icon: "school",
-    title: "Planificaciones EBI",
-    description:
-      "Genera secuencias didácticas alineadas con las competencias específicas, generales y criterios de logro del nuevo marco curricular.",
-  },
-  {
-    icon: "diversity_3",
-    title: "Soporte Multigrado",
-    description:
-      "Crea propuestas que integran diferentes niveles en una misma actividad, ideal para escuelas rurales o aulas heterogéneas.",
-  },
-  {
-    icon: "psychology_alt",
-    title: "Adaptaciones Curriculares",
-    description:
-      "Genera variantes de tus actividades adaptadas para estudiantes con necesidades educativas especiales en un clic.",
-  },
-  {
-    icon: "fact_check",
-    title: "Rúbricas Automáticas",
-    description:
-      "Obtené grillas de evaluación detalladas y rúbricas que conectan directamente con los criterios de logro seleccionados.",
-  },
-  {
-    icon: "smart_toy",
-    title: "Asistente IA Chat",
-    description:
-      "Un chatbot entrenado específicamente con documentos de ANEP para resolver tus dudas sobre el programa al instante.",
-  },
-  {
-    icon: "explore",
-    title: "Explorador EBI",
-    description:
-      "Navega fácilmente por el programa oficial. Filtra, busca y encuentra rápidamente competencias y contenidos.",
-  },
-];
+import { getTranslations } from "next-intl/server";
 
-export default function Features() {
+const ICONS = ["school", "diversity_3", "psychology_alt", "fact_check", "smart_toy", "explore"];
+
+export default async function Features() {
+  const t = await getTranslations("Features");
+
+  const features = ICONS.map((icon, i) => ({
+    icon,
+    title: t(`items.${i}.title`),
+    description: t(`items.${i}.description`),
+  }));
+
   return (
     <section className="py-24 px-6 bg-dark-bg text-stone-300" id="funcionalidades">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="font-headline text-3xl md:text-5xl text-white mb-6">
-            Herramientas pensadas para tu día a día
+            {t("heading")}
           </h2>
           <p className="text-lg max-w-2xl mx-auto text-stone-400">
-            Todo lo que necesitás para gestionar tus clases, integrado en un solo lugar.
+            {t("subheading")}
           </p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
