@@ -85,10 +85,10 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "¿Funciona para 3° a 6° grado EBI?",
+      name: "¿Funciona para toda la primaria uruguaya?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Sí, está diseñado específicamente para maestras del Tramo 3 y Tramo 4 de Educación Básica Integrada (3° a 6° grado de primaria), respetando las características de estas edades.",
+        text: "Sí, cubre toda la primaria uruguaya: de inicial (3 años) a 6to grado, abarcando los Tramos 1, 2, 3 y 4 de Educación Básica Integrada, respetando las competencias y criterios de logro de cada tramo.",
       },
     },
     {

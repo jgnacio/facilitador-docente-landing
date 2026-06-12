@@ -75,7 +75,7 @@
       "0": {
         "title": "First, maps the curriculum",
         "quote": "\"You know the plan has a solid foundation — every activity is anchored to the official program.\"",
-        "description": "Identifies the Specific Competencies and Achievement Criteria for your grade and subject. This is not a generic chatbot. It knows the difference between Tramo 3 and Tramo 4."
+        "description": "Identifies the Specific Competencies and Achievement Criteria for your grade and subject. Covers all of Uruguayan primary school: from preschool (age 3) through 6th grade, Tramos 1 to 4."
       },
       "1": {
         "title": "Then, gets to know your class",
@@ -164,8 +164,8 @@
         "answer": "The agent tells you exactly which part of the official program each suggested content comes from. Proposed activities are anchored directly to the learning goals and achievement criteria."
       },
       "3": {
-        "question": "Does it work for 3rd to 6th grade EBI?",
-        "answer": "Yes, it's designed specifically for teachers in Tramo 3 and Tramo 4 of Educación Básica Integrada (3rd to 6th grade of primary school), respecting the characteristics of these age groups."
+        "question": "Does it work for all of Uruguayan primary school?",
+        "answer": "Yes, it covers all of Uruguayan primary school: from preschool (age 3) through 6th grade, spanning Tramos 1, 2, 3 and 4 of Educación Básica Integrada. Teachers at every level — from preschool through 6th grade — can plan with the agent."
       },
       "4": {
         "question": "What are Specific Competencies and how does the agent use them?",

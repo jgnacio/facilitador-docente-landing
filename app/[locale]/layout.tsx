@@ -31,15 +31,19 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://facilitadordocente.com"),
-  title: "Planificaciones ANEP en minutos con IA | Facilitador Docente EBI Uruguay",
+  title: "Planificación Docente con IA | Primaria Uruguay — Facilitador Docente",
   description:
-    "Planificá en minutos, no en horas. Facilitador Docente lee el currículo oficial de ANEP (EBI) y crea planificaciones con Competencias Específicas y Criterios de Logro para Tramo 3 y 4.",
+    "El agente de IA que lee el currículo oficial de ANEP, conoce a tus alumnos y planifica con vos. Toda la primaria, de inicial a 6to.",
   keywords: [
     "planificación docente Uruguay",
     "EBI Uruguay",
     "ANEP currículo",
     "competencias específicas EBI",
     "criterios de logro primaria",
+    "planificación inicial Uruguay",
+    "planificación Tramo 1 Tramo 2",
+    "maestras inicial Uruguay",
+    "educación inicial ANEP",
     "agente IA educación",
     "maestras Uruguay planificación",
     "Educación Básica Integrada",
@@ -132,7 +136,7 @@ export default async function RootLayout({
               applicationCategory: "EducationalApplication",
               operatingSystem: "Web",
               description:
-                "IA que lee el currículo oficial de ANEP (EBI) y crea planificaciones con Competencias Específicas y Criterios de Logro para Tramo 3 y 4 de Educación Básica Integrada en Uruguay.",
+                "IA que lee el currículo oficial de ANEP (EBI) y crea planificaciones con Competencias Específicas y Criterios de Logro para toda la primaria uruguaya: de inicial (3 años) a 6to grado.",
               url: "https://facilitadordocente.com",
               offers: { "@type": "Offer", price: "400", priceCurrency: "UYU" },
               inLanguage: "es-UY",
