@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server";
 
-const ICONS = ["school", "diversity_3", "psychology_alt", "fact_check", "smart_toy", "explore"];
+const ICONS = ["school", "diversity_3", "psychology_alt", "fact_check", "smart_toy", "explore", "account_tree"];
 
 export default async function Features() {
   const t = await getTranslations("Features");

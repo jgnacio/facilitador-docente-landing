@@ -65,6 +65,10 @@
       "5": {
         "title": "EBI Explorer",
         "description": "Navigate the official curriculum easily. Filter, search, and quickly find competencies and content."
+      },
+      "6": {
+        "title": "Organize your school year",
+        "description": "Organize everything in Groups → Integrated Projects → Activity Sequences → Activities, matching the real hierarchy you already use in the classroom."
       }
     }
   },
@@ -111,41 +115,53 @@
   },
   "Pricing": {
     "heading": "Invest in your free time",
-    "subheading": "Secure monthly or annual payments via Mercado Pago Uruguay.",
+    "subheading": "Start for free. Upgrade to Basic or MAX whenever you need, with secure monthly, quarterly, or annual payments via Mercado Pago Uruguay.",
     "perMonth": "/mo",
     "priceConsult": "Price on request",
     "subscribe": "Subscribe",
+    "startFree": "Start for free",
+    "startTrial": "Try 7 days free",
     "consult": "Contact us",
     "mostPopular": "Most popular",
+    "trialNote": "7 days free, no card required",
     "forDirectors": "For directors",
     "uyu": "Uruguayan pesos · via Mercado Pago",
-    "plusFeatures": {
-      "0": "Unlimited lesson plans",
-      "1": "AI assistant",
-      "2": "PDF export",
-      "3": "Curricular adaptations"
+    "free": "Free",
+    "noCard": "No credit card required",
+    "freeFeatures": {
+      "0": "3 AI lesson plans per month",
+      "1": "1 group",
+      "2": "No student management or sequences",
+      "3": "PDF export with watermark"
+    },
+    "basicFeatures": {
+      "0": "Unlimited AI agent",
+      "1": "Unlimited groups",
+      "2": "Student management",
+      "3": "Sequences and integrated projects",
+      "4": "PDF export with watermark"
     },
     "maxFeatures": {
-      "0": "Unlimited lesson plans",
-      "1": "AI assistant",
-      "2": "PDF export",
-      "3": "Curricular adaptations",
-      "4": "Grounded descriptions",
-      "5": "Advanced AI models",
-      "6": "Early access to new features",
+      "0": "Unlimited AI agent",
+      "1": "Unlimited groups",
+      "2": "Student management",
+      "3": "Sequences and integrated projects",
+      "4": "Specialist SEN (NEE) reports",
+      "5": "AI-generated bimonthly grounded descriptions",
+      "6": "PDF export without watermark",
       "7": "Priority support"
     },
     "instFeatures": {
-      "0": "Unlimited lesson plans",
-      "1": "AI assistant",
-      "2": "PDF export",
-      "3": "Curricular adaptations",
-      "4": "Grounded descriptions",
-      "5": "Advanced AI models",
-      "6": "Early access to new features",
-      "7": "Priority support",
+      "0": "Unlimited AI agent for the whole teaching staff",
+      "1": "Per-teacher licenses",
+      "2": "Centralized account administration",
+      "3": "Director dashboard with school metrics",
+      "4": "Sequences and integrated projects",
+      "5": "Specialist SEN (NEE) reports",
+      "6": "Bimonthly grounded descriptions",
+      "7": "PDF export without watermark",
       "8": "Per-student progress tracking",
-      "9": "Director dashboard with school metrics"
+      "9": "Priority support"
     }
   },
   "FAQ": {
@@ -177,7 +193,7 @@
     "heading": "Get your weekends back.",
     "subheading": "Teaching is your calling. Bureaucracy shouldn't be. Join hundreds of teachers in Uruguay who already plan faster and better.",
     "cta": "Access Facilitador Docente",
-    "footnote": "From $400 UYU/month. Cancel anytime."
+    "footnote": "Start for free. Paid plans from $400 UYU/month. Cancel anytime."
   },
   "Footer": {
     "privacy": "Privacy",

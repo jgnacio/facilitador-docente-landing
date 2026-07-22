@@ -78,20 +78,34 @@ const MAILTO_INSTITUCIONAL =
 export default function Pricing() {
   const t = useTranslations("Pricing");
 
-  const plusFeatures = [0, 1, 2, 3].map((i) => ({ text: t(`plusFeatures.${i}`), included: true }));
+  const freeFeatures = [0, 1, 2, 3].map((i) => ({ text: t(`freeFeatures.${i}`), included: true }));
+  const basicFeatures = [0, 1, 2, 3, 4].map((i) => ({ text: t(`basicFeatures.${i}`), included: true }));
   const maxFeatures = [0, 1, 2, 3, 4, 5, 6, 7].map((i) => ({ text: t(`maxFeatures.${i}`), included: true }));
   const instFeatures = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((i) => ({ text: t(`instFeatures.${i}`), included: true }));
 
   const plans = [
     {
-      name: "PLUS",
+      name: t("free"),
+      price: t("free"),
+      period: null,
+      fill: "low" as const,
+      highlighted: false,
+      badge: null,
+      subtext: t("noCard"),
+      features: freeFeatures,
+      cta: t("startFree"),
+      href: "https://app.facilitadordocente.com",
+      ctaClass: "block w-full py-2.5 px-4 text-center border border-primary text-primary rounded-lg font-medium hover:bg-orange-50 transition-colors",
+    },
+    {
+      name: "Básico",
       price: "$400",
       period: t("perMonth"),
       fill: "mid" as const,
       highlighted: false,
       badge: null,
       subtext: t("uyu"),
-      features: plusFeatures,
+      features: basicFeatures,
       cta: t("subscribe"),
       href: "https://app.facilitadordocente.com",
       ctaClass: "block w-full py-2.5 px-4 text-center border border-primary text-primary rounded-lg font-medium hover:bg-orange-50 transition-colors",
@@ -104,9 +118,9 @@ export default function Pricing() {
       fill: "full" as const,
       highlighted: true,
       badge: t("mostPopular"),
-      subtext: t("uyu"),
+      subtext: `${t("uyu")} · ${t("trialNote")}`,
       features: maxFeatures,
-      cta: t("subscribe"),
+      cta: t("startTrial"),
       href: "https://app.facilitadordocente.com",
       ctaClass: "block w-full py-2.5 px-4 text-center bg-primary text-white rounded-lg font-medium hover:bg-primary-hover transition-colors button-glow",
     },
@@ -136,7 +150,7 @@ export default function Pricing() {
           <p className="text-lg text-stone-600">{t("subheading")}</p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {plans.map((plan) => (
             <div
               key={plan.name}

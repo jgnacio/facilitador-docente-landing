@@ -65,6 +65,10 @@
       "5": {
         "title": "Explorador EBI",
         "description": "Navega fácilmente por el programa oficial. Filtra, busca y encuentra rápidamente competencias y contenidos."
+      },
+      "6": {
+        "title": "Organización de tu año",
+        "description": "Organizá todo en Grupos → Proyectos Integradores → Secuencias de Actividades → Actividades, con la jerarquía real con la que trabajás en el aula."
       }
     }
   },
@@ -111,41 +115,53 @@
   },
   "Pricing": {
     "heading": "Invertí en tu tiempo libre",
-    "subheading": "Pagos seguros mensuales o anuales vía Mercado Pago Uruguay.",
+    "subheading": "Empezá gratis. Pasate a Básico o MAX cuando lo necesites, con pagos seguros mensuales, trimestrales o anuales vía Mercado Pago Uruguay.",
     "perMonth": "/mes",
     "priceConsult": "Precio a consultar",
     "subscribe": "Suscribirse",
+    "startFree": "Comenzar gratis",
+    "startTrial": "Probar 7 días gratis",
     "consult": "Consultar",
     "mostPopular": "Más popular",
+    "trialNote": "7 días gratis, sin tarjeta",
     "forDirectors": "Para directivos",
     "uyu": "Pesos uruguayos · vía Mercado Pago",
-    "plusFeatures": {
-      "0": "Planificaciones ilimitadas",
-      "1": "Asistente IA",
-      "2": "Exportación PDF",
-      "3": "Adaptaciones curriculares"
+    "free": "Gratis",
+    "noCard": "Sin tarjeta de crédito",
+    "freeFeatures": {
+      "0": "3 planificaciones con IA por mes",
+      "1": "1 grupo",
+      "2": "Sin gestión de alumnos ni secuencias",
+      "3": "Exportación PDF con marca de agua"
+    },
+    "basicFeatures": {
+      "0": "Agente IA ilimitado",
+      "1": "Grupos ilimitados",
+      "2": "Gestión de alumnos",
+      "3": "Secuencias y proyectos integradores",
+      "4": "Exportación PDF con marca de agua"
     },
     "maxFeatures": {
-      "0": "Planificaciones ilimitadas",
-      "1": "Asistente IA",
-      "2": "Exportación PDF",
-      "3": "Adaptaciones curriculares",
-      "4": "Descripciones fundadas",
-      "5": "Modelos de IA Avanzados",
-      "6": "Acceso anticipado a funcionalidades nuevas",
+      "0": "Agente IA ilimitado",
+      "1": "Grupos ilimitados",
+      "2": "Gestión de alumnos",
+      "3": "Secuencias y proyectos integradores",
+      "4": "Informes de NEE del especialista",
+      "5": "Descripciones fundadas por bimestre con IA",
+      "6": "Exportación PDF sin marca de agua",
       "7": "Soporte prioritario"
     },
     "instFeatures": {
-      "0": "Planificaciones ilimitadas",
-      "1": "Asistente IA",
-      "2": "Exportación PDF",
-      "3": "Adaptaciones curriculares",
-      "4": "Descripciones fundadas",
-      "5": "Modelos de IA Avanzados",
-      "6": "Acceso anticipado a funcionalidades nuevas",
-      "7": "Soporte prioritario",
+      "0": "Agente IA ilimitado para todo el cuerpo docente",
+      "1": "Licencias por docente",
+      "2": "Administración centralizada de cuentas",
+      "3": "Panel directivo con métricas del centro",
+      "4": "Secuencias y proyectos integradores",
+      "5": "Informes de NEE del especialista",
+      "6": "Descripciones fundadas por bimestre",
+      "7": "Exportación PDF sin marca de agua",
       "8": "Seguimiento de progreso por alumno",
-      "9": "Panel directivo con métricas del centro"
+      "9": "Soporte prioritario"
     }
   },
   "FAQ": {
@@ -177,7 +193,7 @@
     "heading": "Recuperá tus fines de semana.",
     "subheading": "La docencia es tu vocación. La burocracia no debería serlo. Uníte a cientos de docentes en Uruguay que ya planifican más rápido y mejor.",
     "cta": "Acceder a Facilitador Docente",
-    "footnote": "Desde $400/mes. Cancelá cuando quieras."
+    "footnote": "Empezá gratis. Planes pagos desde $400/mes. Cancelá cuando quieras."
   },
   "Footer": {
     "privacy": "Privacidad",
