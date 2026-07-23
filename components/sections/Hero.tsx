@@ -1,10 +1,33 @@
 import { getTranslations } from "next-intl/server";
 
+const videoSchema = {
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  name: "Planificaciones ANEP 2026 con IA | Adecuaciones curriculares EBI | Facilitador Docente Uruguay",
+  description:
+    "El agente de IA que lee el currículo oficial de ANEP, conoce a tus alumnos y planifica con vos. Toda la primaria, de inicial a 6to.",
+  thumbnailUrl: ["https://i.ytimg.com/vi/uJdiDcgr2w4/hqdefault.jpg"],
+  uploadDate: "2026-06-23",
+  embedUrl: "https://www.youtube.com/embed/uJdiDcgr2w4",
+  publisher: {
+    "@type": "Organization",
+    name: "Facilitador Docente",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.facilitadordocente.com/images/logo.png",
+    },
+  },
+};
+
 export default async function Hero() {
   const t = await getTranslations("Hero");
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }}
+      />
       <div id="navbar-sentinel" className="absolute top-0 h-10 w-full pointer-events-none" aria-hidden="true" />
       <section className="pt-40 pb-24 px-6 relative overflow-hidden bg-light-bg" id="inicio">
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/3" />
