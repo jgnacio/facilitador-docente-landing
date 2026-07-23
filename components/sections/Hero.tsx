@@ -1,4 +1,5 @@
 import { getTranslations } from "next-intl/server";
+import YouTubeFacade from "@/components/YouTubeFacade";
 
 const videoSchema = {
   "@context": "https://schema.org",
@@ -79,12 +80,10 @@ export default async function Hero() {
             style={{ boxShadow: "0 20px 40px rgba(156,68,0,0.08)" }}
           >
             <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
-              <iframe
-                src="https://www.youtube.com/embed/uJdiDcgr2w4?autoplay=0&loop=1&playlist=uJdiDcgr2w4&controls=1&rel=0&modestbranding=1"
-                allow="autoplay; encrypted-media"
-                allowFullScreen
-                className="absolute inset-0 w-full h-full"
+              <YouTubeFacade
+                videoId="uJdiDcgr2w4"
                 title={t("videoTitle")}
+                thumbnailUrl="https://i.ytimg.com/vi/uJdiDcgr2w4/hqdefault.jpg"
               />
             </div>
           </div>

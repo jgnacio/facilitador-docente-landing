@@ -122,10 +122,6 @@ export default async function RootLayout({
       className={`${fraunces.variable} ${dmSans.variable} ${playfair.variable}`}
     >
       <head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
-          rel="stylesheet"
-        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

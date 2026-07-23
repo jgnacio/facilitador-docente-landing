@@ -1,12 +1,13 @@
 import { getTranslations } from "next-intl/server";
+import { Calendar, BookOpen, ClipboardX } from "lucide-react";
 
-const ICONS = ["calendar_today", "menu_book", "assignment_late"];
+const ICONS = [Calendar, BookOpen, ClipboardX];
 
 export default async function Problem() {
   const t = await getTranslations("Problem");
 
-  const items = ICONS.map((icon, i) => ({
-    icon,
+  const items = ICONS.map((Icon, i) => ({
+    Icon,
     title: t(`items.${i}.title`),
     description: t(`items.${i}.description`),
   }));
@@ -29,7 +30,7 @@ export default async function Problem() {
               className="bg-dark-surface p-8 rounded-xl border border-border-color"
             >
               <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-primary mb-6">
-                <span className="material-symbols-outlined">{p.icon}</span>
+                <p.Icon size={24} />
               </div>
               <h3 className="text-xl font-bold text-white mb-4">{p.title}</h3>
               <p className="text-stone-400 leading-relaxed">{p.description}</p>

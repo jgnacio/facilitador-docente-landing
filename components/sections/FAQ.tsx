@@ -1,4 +1,5 @@
 import { getTranslations } from "next-intl/server";
+import { ChevronDown } from "lucide-react";
 
 export default async function FAQ() {
   const t = await getTranslations("FAQ");
@@ -22,9 +23,7 @@ export default async function FAQ() {
             >
               <summary className="flex justify-between items-center font-bold text-white p-6 cursor-pointer list-none">
                 <span>{faq.question}</span>
-                <span className="material-symbols-outlined text-primary group-open:rotate-180 transition-transform flex-shrink-0 ml-4">
-                  expand_more
-                </span>
+                <ChevronDown className="text-primary group-open:rotate-180 transition-transform flex-shrink-0 ml-4" size={24} />
               </summary>
               <div className="p-6 pt-0 text-stone-400 text-sm leading-relaxed border-t border-border-color/50 mt-2">
                 {faq.answer}

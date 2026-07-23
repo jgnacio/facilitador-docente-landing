@@ -1,12 +1,13 @@
 import { getTranslations } from "next-intl/server";
+import { GraduationCap, UsersRound, Brain, ClipboardCheck, Bot, Compass, ListTree } from "lucide-react";
 
-const ICONS = ["school", "diversity_3", "psychology_alt", "fact_check", "smart_toy", "explore", "account_tree"];
+const ICONS = [GraduationCap, UsersRound, Brain, ClipboardCheck, Bot, Compass, ListTree];
 
 export default async function Features() {
   const t = await getTranslations("Features");
 
-  const features = ICONS.map((icon, i) => ({
-    icon,
+  const features = ICONS.map((Icon, i) => ({
+    Icon,
     title: t(`items.${i}.title`),
     description: t(`items.${i}.description`),
   }));
@@ -28,9 +29,7 @@ export default async function Features() {
               key={f.title}
               className="bg-dark-surface p-6 rounded-xl border border-border-color hover:border-primary/50 transition-colors"
             >
-              <span className="material-symbols-outlined text-primary text-3xl mb-4 block">
-                {f.icon}
-              </span>
+              <f.Icon className="text-primary mb-4" size={30} />
               <h3 className="text-lg font-bold text-white mb-2">{f.title}</h3>
               <p className="text-sm text-stone-400">{f.description}</p>
             </div>

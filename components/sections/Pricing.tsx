@@ -2,6 +2,7 @@
 
 import { sendGAEvent } from "@next/third-parties/google";
 import { useTranslations } from "next-intl";
+import { Check } from "lucide-react";
 
 function HoneyJar({ fill }: { fill: "empty" | "low" | "mid" | "full" | "brim" }) {
   const fills = {
@@ -195,7 +196,7 @@ export default function Pricing() {
               <ul className="space-y-3 mb-8 flex-1 text-sm text-stone-600">
                 {plan.features.map((f, i) => (
                   <li key={i} className="flex items-start gap-2">
-                    <span className="material-symbols-outlined text-[18px] text-primary">check</span>
+                    <Check className="text-primary" size={18} />
                     {f.text}
                   </li>
                 ))}

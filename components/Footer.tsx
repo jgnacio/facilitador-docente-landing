@@ -12,8 +12,8 @@ export default async function Footer() {
         <Image
           src="/images/logo_dark_crop.png"
           alt="Facilitador Docente"
-          width={989}
-          height={1010}
+          width={125}
+          height={128}
           className="h-16 w-auto"
         />
         <div className="flex flex-wrap justify-center gap-6">

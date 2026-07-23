@@ -7,6 +7,7 @@ import { useTranslations } from "next-intl";
 import { useRouter, usePathname } from "@/i18n/navigation";
 import { useLocale } from "next-intl";
 import Image from "next/image";
+import { Hexagon } from "lucide-react";
 
 function HoneycombIcon({ open }: { open: boolean }) {
   const cells = [
@@ -109,8 +110,8 @@ export default function Navbar() {
               <Image
                 src="/images/logo_navbar_crop.png"
                 alt="Facilitador Docente"
-                width={1909}
-                height={494}
+                width={310}
+                height={80}
                 className="h-9 sm:h-10 w-auto"
                 priority
               />
@@ -257,7 +258,7 @@ export default function Navbar() {
                   transition={{ delay: 0.22, duration: 0.2 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  <span className="material-symbols-outlined text-[18px]">hive</span>
+                  <Hexagon size={18} />
                   <span>{t("cta")}</span>
                 </motion.a>
               </div>
