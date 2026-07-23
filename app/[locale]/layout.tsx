@@ -30,7 +30,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://facilitadordocente.com"),
+  metadataBase: new URL("https://www.facilitadordocente.com"),
   title: "Planificación Docente con IA | Primaria Uruguay — Facilitador Docente",
   description:
     "El agente de IA que lee el currículo oficial de ANEP, conoce a tus alumnos y planifica con vos. Toda la primaria, de inicial a 6to.",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     "planificación automática ANEP",
     "herramienta docente Uruguay",
   ],
-  authors: [{ name: "Facilitador Docente", url: "https://facilitadordocente.com" }],
+  authors: [{ name: "Facilitador Docente", url: "https://www.facilitadordocente.com" }],
   robots: {
     index: true,
     follow: true,
@@ -62,17 +62,17 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://facilitadordocente.com",
+    canonical: "https://www.facilitadordocente.com",
     languages: {
-      es: "https://facilitadordocente.com",
-      en: "https://facilitadordocente.com/en",
+      es: "https://www.facilitadordocente.com",
+      en: "https://www.facilitadordocente.com/en",
     },
   },
   openGraph: {
     title: "Planificá con el currículo de verdad | Facilitador Docente",
     description:
       "La IA que conoce el programa oficial de ANEP. Planificá con Competencias Específicas y Criterios de Logro para EBI.",
-    url: "https://facilitadordocente.com",
+    url: "https://www.facilitadordocente.com",
     siteName: "Facilitador Docente",
     images: [
       {
@@ -137,7 +137,7 @@ export default async function RootLayout({
               operatingSystem: "Web",
               description:
                 "IA que lee el currículo oficial de ANEP (EBI) y crea planificaciones con Competencias Específicas y Criterios de Logro para toda la primaria uruguaya: de inicial (3 años) a 6to grado.",
-              url: "https://facilitadordocente.com",
+              url: "https://www.facilitadordocente.com",
               offers: { "@type": "Offer", price: "400", priceCurrency: "UYU" },
               inLanguage: "es-UY",
               audience: { "@type": "EducationalAudience", educationalRole: "teacher" },

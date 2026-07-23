@@ -4,10 +4,10 @@ export const metadata: Metadata = {
   title: "Política de Privacidad | Facilitador Docente",
   description: "Cómo recopilamos, usamos y protegemos tus datos en Facilitador Docente.",
   alternates: {
-    canonical: "https://facilitadordocente.com/privacidad",
+    canonical: "https://www.facilitadordocente.com/privacidad",
     languages: {
-      es: "https://facilitadordocente.com/privacidad",
-      en: "https://facilitadordocente.com/en/privacidad",
+      es: "https://www.facilitadordocente.com/privacidad",
+      en: "https://www.facilitadordocente.com/en/privacidad",
     },
   },
 };

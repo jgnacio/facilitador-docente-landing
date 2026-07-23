@@ -13,8 +13,8 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Facilitador Docente",
-  url: "https://facilitadordocente.com",
-  logo: "https://facilitadordocente.com/images/logo.png",
+  url: "https://www.facilitadordocente.com",
+  logo: "https://www.facilitadordocente.com/images/logo.png",
   description:
     "Herramienta de inteligencia artificial para planificación docente alineada al currículo oficial de ANEP para maestras de EBI Uruguay.",
   address: {

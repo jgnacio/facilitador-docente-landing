@@ -4,10 +4,10 @@ export const metadata: Metadata = {
   title: "Términos de Servicio | Facilitador Docente",
   description: "Condiciones de uso del servicio Facilitador Docente.",
   alternates: {
-    canonical: "https://facilitadordocente.com/terminos",
+    canonical: "https://www.facilitadordocente.com/terminos",
     languages: {
-      es: "https://facilitadordocente.com/terminos",
-      en: "https://facilitadordocente.com/en/terminos",
+      es: "https://www.facilitadordocente.com/terminos",
+      en: "https://www.facilitadordocente.com/en/terminos",
     },
   },
 };

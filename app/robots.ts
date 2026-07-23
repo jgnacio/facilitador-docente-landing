@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://facilitadordocente.com/sitemap.xml",
+    sitemap: "https://www.facilitadordocente.com/sitemap.xml",
   };
 }
